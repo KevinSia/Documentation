@@ -5,9 +5,7 @@ loop.do{puts"hello,world!"}
 #Example of bad code style!
 ```
 
-```ruby
-hello
-```
+#Let's go
 
 + 2 spaces indentation with soft tabs
 ```ruby
@@ -37,17 +35,17 @@ def some_method; end
   [1, 2, 3]
   foo: bar
   ```
-  + Around braces
+  + Around braces `{}`
   ```ruby
   { provider: facebook }
   ```
 + No spaces 
-  + around [] and ()
+  + around `[]` and `()`
   ```ruby
   object.(parameter1, parameter2, parameter3)
   [1, 2, 3].size
   ```
-  + after ! 
+  + after `!` 
   ```ruby
   !something
   ```
@@ -55,7 +53,7 @@ def some_method; end
   ```ruby
   1..5
   ```
-+ case-when & if-else  
++ `case-when` & `if-else`
   + case and when syntax same line
   ```ruby
   case
@@ -67,12 +65,12 @@ def some_method; end
     puts 'baz'
   end
   ```
-  + assigning with if-else (putting in on next line -> efficient)
+  + assigning with `if-else` (putting in on next line makes it efficient to read)
   ```ruby
   result =
     #condition same line with syntax
     if condition1   
-      do something
+      do something12
     else 
       do another thing
     end
@@ -111,7 +109,7 @@ menu_item =
 ```ruby 
 1_000_000
 ````
-+ trailing whitespaces (sneaky)
++ avoid trailing whitespaces (sneaky)
 ```ruby
 Hello world!        
 ```
@@ -122,7 +120,7 @@ b = 'bar'
 c = 'baz'
 d = 'qux'
 ```
-+ Ternary operator > if/then/else/end
++ Ternary operator > `if/then/else/end`
 ```ruby
 result = condition ? short_expression : short_expression2
 ```
@@ -134,7 +132,7 @@ else
   something_else
 end
 ```
-+ avoid !! 
++ avoid `!!` 
 ```ruby
 x = 'text'
 if !!x
@@ -149,7 +147,12 @@ unless x.nil?
 end
 ```
 
-+
++ try single-line control flow
+```ruby
+document.saved? || document.save!
+
+some_condition && do_something
+```
 
 
 
