@@ -7,8 +7,13 @@ hello
 ```
 
 + 2 spaces indentation with soft tabs
-+ Expression per line 
-⋅⋅1. One expression per line
-⋅⋅1. Except empty body method
++ One expression per line
+```ruby 
+def some_method
+  #do something
+end
+```
++ Except empty body method
++ 
 
 
