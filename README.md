@@ -277,7 +277,7 @@ end
 def update  # Safe method.
 end
 ```
-#`# Comments & Comment Annotations`
+## Comments & Comment Annotations`
 + Write comments in English!
 + Keep comments up-to-date
 + Use annotation keywords while describing problem to indicate problem type
