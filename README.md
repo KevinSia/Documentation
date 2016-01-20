@@ -84,8 +84,7 @@ str = 'We wish you a merry christmas, ' +
       'we wish you a merry christmas, ' +
       'and a happy new year!'
 ```
-+ method chaining
-```ruby
++ method chaining (by Law of Demeter, nope)
 one.two.three
   .four
 ```
@@ -432,7 +431,17 @@ name_list.each { |n| name << #{n} }
 'foo-bar-baz'.tr('-','_') # => 'foo_bar_baz'
 ```
 ## RegEx
-
++ Use x modifier for complex regexps. This makes them more readable and you can add some useful comments. Just be careful as spaces are ignored. 
+```ruby
+regexp = /
+  start         # some text
+  \s            # white space char
+  (group)       # first group
+  (?:alt1|alt2) # some alternation
+  end
+/x
+```
++ Test with rubular if regex is necessary
   
   
   
@@ -442,5 +451,5 @@ name_list.each { |n| name << #{n} }
   
   
   #References
-  1.https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating
-  2.
+  1. https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating
+  2. 
