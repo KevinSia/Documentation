@@ -442,7 +442,14 @@ regexp = /
   end
 /x
 ```
-+ Test with rubular if regex is necessary
+# Rails
+
+## Configuration
++ Keep initialization file in seperate file and name it with gem's name 
+  + Example: `clearance.rb` , `carrierwave.rb` 
++ Keep configuration that's applicable to all environments in the config/application.rb file. 
+## Routes
+
   
   
   
@@ -452,5 +459,5 @@ regexp = /
   
   
   #References
-  1. [Ruby Coding Styles]https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating
-  2. 
+  1. [Ruby Coding Styles](https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating)
+  2. [Rails Coding Styles](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
