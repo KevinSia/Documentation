@@ -85,6 +85,7 @@ str = 'We wish you a merry christmas, ' +
       'and a happy new year!'
 ```
 + method chaining (by Law of Demeter, nope)
+```ruby
 one.two.three
   .four
 ```
@@ -451,5 +452,5 @@ regexp = /
   
   
   #References
-  1. https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating
+  1. [Ruby Coding Styles]https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating
   2. 
