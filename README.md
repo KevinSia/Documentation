@@ -449,6 +449,30 @@ regexp = /
   + Example: `clearance.rb` , `carrierwave.rb` 
 + Keep configuration that's applicable to all environments in the config/application.rb file. 
 ## Routes
++ Use `member`/`collection` routes to add action into RESTful resource
+```ruby
+# recognizes photos/:id/preview
+# and creates path & url
+resources :photos do
+  get 'preview' on: :member
+end
+
+# recognizes photos/search
+# and creates path & url
+resources :photos do
+  get 'search' on: :collection
+end
+```
++ Multiple `member` / `collection` routes
+```ruby
+resources :listings do
+  member do
+    get 'reservations'
+    get 'photos'
+  end
+end
+```
+
 
   
   
