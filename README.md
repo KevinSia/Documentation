@@ -472,10 +472,65 @@ resources :listings do
   end
 end
 ```
++ Use nested routes to describe relationship between models
+```ruby
+# posts has_many comments and comments belongs_to post
+resources :posts do
+  resources :comments
+end
+```
++ Resources should never be nested more than 1 level deep
+  + Use shallow: true if must to avoid long path_name and urls
+  ```ruby
+  resources :posts, shallow: true do
+    resources :comments do
+      resources :versions
+    end
+  end
+  ```
+# Controller
++ Keep the controller skinny
+  + Controller should only be used to
+    + Retrieve data
+    + Redirect/rendering
+    + Authentication/authorization and session/cookie handling
+  + No business logic should present in controller
++ Share not more than two instance variables between controller and view
++ Use `render plain` to render text
+```ruby
+render plain: 'Rails'
+```
+# Models
++ Feel free to introduce non ActiveRecord classes to make Model 'skinny'
+```ruby
+# non ActiveRecord class
+~/app/model/rating.rb
+class Rating
+  def self.from_cost(cost)
+    if cost <= 2
+      new("A")
+    elsif cost <= 4
+      new("B")
+    elsif cost <= 8
+      new("C")
+    elsif cost <= 16
+      new("D")
+    else
+      new("F")
+    end
+  end
+end
 
-
+~/app/model/movie.rb
+class Movie < ActiveRecord::Base
+  # some codes
   
-  
+  def rating
+    @rating ||= Rating.from_cost(cost)
+  end
+end
+```
++
   
   
   
@@ -485,3 +540,5 @@ end
   #References
   1. [Ruby Coding Styles](https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating)
   2. [Rails Coding Styles](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
+  3. [10 mistakes a rail programmer makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
+  4. 
