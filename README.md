@@ -530,7 +530,7 @@ class Movie < ActiveRecord::Base
   end
 end
 ```
-+
++ Time.zone.today instead of Date.today
   
   
   
