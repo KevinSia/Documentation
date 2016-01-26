@@ -554,6 +554,27 @@ describe 'qux' do
   # code something
 end
 ```
++ Leave one line around `if` blocks
+```ruby
+describe '#pay_debt do
+  it 'returns money' do
+  end
+  
+  it 'goes away' do
+  end
+  
+  it 'disappear' do
+  end
+end
+```
++ No need to do `before(:each)` (it is on default)
+```ruby
+describe '#this' do
+  before { # do something }
+end
+```
++
+```
 + Use `let`/`subject`/`it` blocks whenever possible to DRY up your code
 ```ruby
 Bad example:
@@ -644,5 +665,5 @@ end
   3. [Mistakes A Rails Programmer Makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
   4. [R-spec Style Guide](https://github.com/reachlocal/rspec-style-guide)
   5. [Better Specs](http://betterspecs.org/)
-  6. 
+  
 
