@@ -531,7 +531,86 @@ class Movie < ActiveRecord::Base
 end
 ```
 + Time.zone.today instead of Date.today
+
+----------
+
+## R-Spec coding styles
++ No empty lines below `describe`, `context`, or `feature`
+```ruby
+describe 'foo' do
+  context 'bar' do
+    it `baz` do
+      # test something
+    end
+  end
+end
+```
++ Leave empty lines below `let`, `before/after`, or `subject`
+```ruby
+subject{ FactoryGirl.create(:something) }
+let(:user){ FactoryGirl.create(:user) }
+
+describe 'qux' do
+  # code something
+end
+```
++ Use `let`/`subject`/`it` blocks whenever possible to DRY up your code
+```ruby
+Bad example:
+
+describe 'Card' do
+  describe '#new' do
+    describe 'Two of hearts' do
+      it 'has a value of 2' do
+        card = Card.new("2H")
+        card.value.should equal(2)
+      end
+    end
+    
+    describe 'King of clubs' do
+      it 'has a value of 13' do
+        card = Card.new("KC")
+        card.value.should equal(13)
+      end
+    end
+
+    describe 'Bad value' do
+      it 'should raise StandardError' do
+        expect { card = Card.new("ZZ") }.to raise_error(StandardError)
+      end
+    end
+  end
+end
+
+Good example:
+
+# used *subject* for initialization
+describe 'Card' do
+  subject do
+    Card.new(card_type)
+  end
   
+  describe '#value' do
+    context 'Two of hearts' do
+      let(:card_type) {"2H"}      # more readable
+      its(:value) { should == 2 } 
+    end
+    
+    context 'king of clubs' do
+      let(:card_type) {"KC"}
+      its(:value) { should == 13 }
+    end
+    
+    #no changes below
+    context 'bad value' do
+      it 'should raise StandardError' do
+        expect { card = Card.new("ZZ") }.to raise_error(StandardError)
+      end
+    end
+  end
+end
+```
++ 
   
   
   
@@ -540,5 +619,6 @@ end
   #References
   1. [Ruby Coding Styles](https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating)
   2. [Rails Coding Styles](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
-  3. [10 mistakes a rail programmer makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
-  4. 
+  3. [Mistakes A Rails Programmer Makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
+  4. [R-spec Style Guide](https://github.com/reachlocal/rspec-style-guide)
+  5. 
