@@ -278,7 +278,7 @@ end
 def update  # Safe method.
 end
 ```
-## Comments & Comment Annotations`
+## Comments & Comment Annotations
 + Write comments in English!
 + Keep comments up-to-date
 + Use annotation keywords while describing problem to indicate problem type
@@ -442,6 +442,7 @@ regexp = /
   end
 /x
 ```
+------
 # Rails
 
 ## Configuration
@@ -488,7 +489,7 @@ end
     end
   end
   ```
-# Controller
+## Controller
 + Keep the controller skinny
   + Controller should only be used to
     + Retrieve data
@@ -500,7 +501,7 @@ end
 ```ruby
 render plain: 'Rails'
 ```
-# Models
+## Models
 + Feel free to introduce non ActiveRecord classes to make Model 'skinny'
 ```ruby
 # non ActiveRecord class
@@ -534,7 +535,7 @@ end
 
 ----------
 
-## R-Spec coding styles
+# R-Spec coding styles
 + No empty lines below `describe`, `context`, or `feature`
 ```ruby
 describe 'foo' do
@@ -573,8 +574,7 @@ describe '#this' do
   before { # do something }
 end
 ```
-+
-```
+
 + Use `let`/`subject`/`it` blocks whenever possible to DRY up your code
 ```ruby
 Bad example:
@@ -654,7 +654,40 @@ describe Thing do
   end
 end
 ```
-+
++ (subjective practice) Avoid writing should in the beginning of `it` description. It represents actual funtionality (It will happen!)
++ General rule of thumb - Use one expectation/assertion in one `it` block
+```ruby
+describe UsersController do
+  describe 'GET new' do
+    it 'assigns a new user' do
+      get :new
+      expect(assign[:user]).to be_a(Article)
+    end
+    
+    it 'render new template' do
+      get :new
+      expect(response).to render_template :new
+    end
+  end
+end
+```
++ `context` should contain both positive & negative(complement) cases
+```ruby
+describe '#edit' do
+  context 'when user keys in valid input' do
+  end
+  
+  context 'when user keys in invalid input' do
+  end
+end
+```
++ `context` description should always starts with 'when' and in proper grammar
+```ruby
+context 'when email is not present' do
+# do something
+end
+```
++ 
   
   
   
