@@ -610,8 +610,30 @@ describe 'Card' do
   end
 end
 ```
-+ 
-  
++ `describe` use `.` when referring to class method and `#` for instance method
+```ruby
+describe '.authenticate' do
+end
+
+describe '#admin' do
+end
+```
++ Group `let`/`subject` blocks but seperate them from `before`/`after` blocks
+```ruby
+describe Thing do
+  subject { FactoryGirl.create(:some_article) }
+  let(:user) { FactoryGirl.create(:user) }
+
+  before do
+    # ...
+  end
+
+  after do
+    # ...
+  end
+end
+```
++
   
   
   
@@ -621,4 +643,6 @@ end
   2. [Rails Coding Styles](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
   3. [Mistakes A Rails Programmer Makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
   4. [R-spec Style Guide](https://github.com/reachlocal/rspec-style-guide)
-  5. 
+  5. [Better Specs](http://betterspecs.org/)
+  6. 
+
