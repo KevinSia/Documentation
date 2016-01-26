@@ -631,14 +631,6 @@ describe 'Card' do
   end
 end
 ```
-+ `describe` use `.` when referring to class method and `#` for instance method
-```ruby
-describe '.authenticate' do
-end
-
-describe '#admin' do
-end
-```
 + Group `let`/`subject` blocks but seperate them from `before`/`after` blocks
 ```ruby
 describe Thing do
@@ -654,7 +646,6 @@ describe Thing do
   end
 end
 ```
-+ (subjective practice) Avoid writing should in the beginning of `it` description. It represents actual funtionality (It will happen!)
 + General rule of thumb - Use one expectation/assertion in one `it` block
 ```ruby
 describe UsersController do
@@ -671,7 +662,7 @@ describe UsersController do
   end
 end
 ```
-+ `context` should contain both positive & negative(complement) cases
++ `context` should contain both positive & negative(complement) cases/states
 ```ruby
 describe '#edit' do
   context 'when user keys in valid input' do
@@ -681,13 +672,42 @@ describe '#edit' do
   end
 end
 ```
+## Test Description
 + `context` description should always starts with 'when' and in proper grammar
 ```ruby
 context 'when email is not present' do
 # do something
 end
 ```
-+ 
++ (subjective practice) Avoid writing should in the beginning of `it` description. It represents actual funtionality (It will happen!)
++ Conditional statements should not appear in `it`, wrap it in `context` instead
+```ruby
+Bad example:
+it `returns 0 if its an even number' do
+end
+
+Better example:
+context 'when the number is even' do
+  it `returns 0` do
+    # do something
+  end
+end
+
+context 'when the number is odd' do
+  it 'returns 1' do
+    # do something
+  end
+end
+```
++ In `describe` description, use `.` when referring to class method and `#` for instance method
+```ruby
+describe '.authenticate' do
+end
+
+describe '#admin' do
+end
+```
++
   
   
   
