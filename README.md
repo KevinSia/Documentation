@@ -5,6 +5,8 @@
 loop.do{puts"hello,world!"}
 #Example of bad code style!
 ```
+`[TOC]`
+
 #Ruby
 ##Syntaxes
 
