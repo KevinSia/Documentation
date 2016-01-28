@@ -568,7 +568,7 @@ describe '#pay_debt do
   end
 end
 ```
-+ No need to do `before(:each)` (it is on default)
++ Avoid using `before(:each)` if possible, use `before` instead
 ```ruby
 describe '#this' do
   before { # do something }
@@ -662,7 +662,7 @@ describe UsersController do
   end
 end
 ```
-+ `context` should contain both positive & negative(complement) cases/states
++ `context` should contain both positive & negative(complementary) cases/states
 ```ruby
 describe '#edit' do
   context 'when user keys in valid input' do
@@ -679,7 +679,7 @@ context 'when email is not present' do
 # do something
 end
 ```
-+ (subjective practice) Avoid writing should in the beginning of `it` description. It represents actual funtionality (It will happen!)
++ (subjective practice) Avoid writing *should* in the beginning of `it` description. It represents actual funtionality (It will happen!)
 + Conditional statements should not appear in `it`, wrap it in `context` instead
 ```ruby
 Bad example:
@@ -702,13 +702,306 @@ end
 + In `describe` description, use `.` when referring to class method and `#` for instance method
 ```ruby
 describe '.authenticate' do
+  # test something
 end
 
 describe '#admin' do
+  # test something
 end
 ```
-+
++ Avoid incidental state.
+```ruby
+  # Bad example
+  it 'cures a new patient' do
+    patient.cure
+    expect(Patient.count).to eq(5) 
+  end
   
+  # Good example
+  it 'cures a new patient' do
+    expect{ patient.cure }.to change(Patient, :count).by(1)
+  end
+```
++ Use Rspec magical matcher.
+```ruby
+  # say you have a method called published?
+  it 'is published' do
+    expect(article).to be_published
+  end
+```
++ Use `let` over `before`/`before(:each)` as `let` is lazily evaluated.
+```ruby
+# use this:
+let(:article) { FactoryGirl.create(:article) }
+
+# ... instead of this:
+before { @article = FactoryGirl.create(:article) }
+```
+##Views
+
++ The directory structure of the view specs spec/views matches the one in app/views. 
++ For example the specs for the views in app/views/users are placed in spec/views/users.
++ The naming convention for the view specs is adding `_spec.rb` to the view name, for example the view `_form.html.erb` has a corresponding spec `_form.html.erb_spec.rb`.
++ spec_helper.rb needs to be required in each view spec file.
+
++ The outer describe block uses the path to the view without the app/views part. This is used by the render method when it is called without arguments.
+```ruby
+      # spec/views/articles/new.html.erb_spec.rb
+      require 'spec_helper'
+
+      describe 'articles/new.html.erb' do
+        # ...
+      end
+```
++ Always mock the models in the view specs. The purpose of the view is only to display information.
+
++ The method assign supplies the instance variables which the view uses and are supplied by the controller.
+```ruby
+# spec/views/articles/edit.html.erb_spec.rb
+  describe 'articles/edit.html.erb' do
+    it 'renders the form for a new article creation' do
+      assign(:article, double(Article).as_null_object)
+      render
+      expect(rendered).to have_selector('form',
+        method: 'post',
+        action: articles_path
+      ) do |form|
+          expect(form).to have_selector('input', type: 'submit')
+        end
+    end
+  end
+```
++ Prefer the capybara negative selectors over to_not with the positive.
+```ruby
+    # bad
+    expect(page).to_not have_selector('input', type: 'submit')
+    expect(page).to_not have_xpath('tr')
+
+    # good
+    expect(page).to have_no_selector('input', type: 'submit')
+    expect(page).to have_no_xpath('tr')
+```
++ When a view uses helper methods, these methods need to be stubbed. Stubbing the helper methods is done on the template object:
+```ruby
+  # app/helpers/articles_helper.rb
+  class ArticlesHelper
+    def formatted_date(date)
+      # ...
+    end
+  end
+
+  # app/views/articles/show.html.erb
+  <%= 'Published at: #{formatted_date(@article.published_at)}' %>
+
+  # spec/views/articles/show.html.erb_spec.rb
+  describe 'articles/show.html.erb' do
+    it 'displays the formatted date of article publishing' do
+      article = double(Article, published_at: Date.new(2012, 01, 01))
+      assign(:article, article)
+
+      allow(template).to_receive(:formatted_date).with(article.published_at).and_return('01.01.2012')
+
+      render
+      expect(rendered).to have_content('Published at: 01.01.2012')
+    end
+  end
+```
++ The helpers specs are separated from the view specs in the spec/helpers directory.
+
+## Controllers
+
++ Mock the models and stub their methods. Testing the controller should not depend on the model creation.
++ Test only the behaviour the controller should be responsible about:
+  + Execution of particular methods
+  + Data returned from the action - assigns, etc.
+
+  + Result from the action - template render, redirect, etc.
+  ```ruby
+          # Example of a commonly used controller spec
+          # spec/controllers/articles_controller_spec.rb
+          # We are interested only in the actions the controller should perform
+          # So we are mocking the model creation and stubbing its methods
+          # And we concentrate only on the things the controller should do
+
+          describe ArticlesController do
+            # The model will be used in the specs for all methods of the controller
+            let(:article) { double(Article) }
+
+            describe 'POST create' do
+              before { allow(Article).to receive(:new).and_return(article) }
+
+              it 'creates a new article with the given attributes' do
+                expect(Article).to receive(:new).with(title: 'The New Article Title').and_return(article)
+                post :create, message: { title: 'The New Article Title' }
+              end
+
+              it 'saves the article' do
+                expect(article).to receive(:save)
+                post :create
+              end
+
+              it 'redirects to the Articles index' do
+                allow(article).to receive(:save)
+                post :create
+                expect(response).to redirect_to(action: 'index')
+              end
+            end
+          end
+    ```
++ Use context when the controller action has different behaviour depending on the received params.
+```ruby
+      # A classic example for use of contexts in a controller spec is creation or update when the object saves successfully or not.
+
+      describe ArticlesController do
+        let(:article) { double(Article) }
+
+        describe 'POST create' do
+          before { allow(Article).to receive(:new).and_return(article) }
+
+          it 'creates a new article with the given attributes' do
+            expect(Article).to receive(:new).with(title: 'The New Article Title').and_return(article)
+            post :create, article: { title: 'The New Article Title' }
+          end
+
+          it 'saves the article' do
+            expect(article).to receive(:save)
+            post :create
+          end
+
+          context 'when the article saves successfully' do
+            before do
+              allow(article).to receive(:save).and_return(true)
+            end
+
+            it 'sets a flash[:notice] message' do
+              post :create
+              expect(flash[:notice]).to eq('The article was saved successfully.')
+            end
+
+            it 'redirects to the Articles index' do
+              post :create
+              expect(response).to redirect_to(action: 'index')
+            end
+          end
+
+          context 'when the article fails to save' do
+            before do
+              allow(article).to receive(:save).and_return(false)
+            end
+
+            it 'assigns @article' do
+              post :create
+              expect(assigns[:article]).to eq(article)
+            end
+
+            it 're-renders the 'new' template' do
+              post :create
+              expect(response).to render_template('new')
+            end
+          end
+        end
+      end
+```
+## Models
+
++ Do not mock the models in their own specs.
+
++ Use FactoryGirl.create to make real objects, or just use a new (unsaved) instance with subject.
+```ruby
+  describe Article do
+    let(:article) { FactoryGirl.create(:article) }
+
+    # Currently, 'subject' is the same as 'Article.new'
+    it 'is an instance of Article' do
+      expect(subject).to be_an Article
+    end
+
+    it 'is not persisted' do
+      expect(subject).to_not be_persisted
+    end
+  end
+```
++ It is acceptable to mock other models or child objects.
+
++ Create the model for all examples in the spec to avoid duplication.
+```ruby
+  describe Article do
+    let(:article) { FactoryGirl.create(:article) }
+  end
+```
++ Add an example ensuring that the FactoryGirl.created model is valid.
+```ruby
+  describe Article do
+    it 'is valid with valid attributes' do
+      expect(article).to be_valid
+    end
+  end
+```
++ When testing validations, use have(x).errors_on to specify the attribute which should be validated. Using be_valid does not guarantee that the problem is in the intended attribute.
+```ruby
+# bad
+describe '#title' do
+  it 'is required' do
+    article.title = nil
+    expect(article).to_not be_valid
+  end
+end
+
+# preferred
+describe '#title' do
+  it 'is required' do
+    article.title = nil
+    expect(article).to have(1).error_on(:title)
+  end
+end
+```
++ Add a separate describe for each attribute which has validations.
+```ruby
+  describe Article do
+    describe '#title' do
+      it 'is required' do
+        article.title = nil
+        expect(article).to have(1).error_on(:title)
+      end
+    end
+  end
+```
++ When testing uniqueness of a model attribute, name the other object another_object.
+```ruby
+  describe Article do
+    describe '#title' do
+      it 'is unique' do
+        another_article = FactoryGirl.create(:article, title: article.title)
+        expect(article).to have(1).error_on(:title)
+      end
+    end
+  end
+```
+# Mailers
++ The model in the mailer spec should be mocked. The mailer should not depend on the model creation.
++ The mailer spec should verify that:
+  + the subject is correct
+  + the receiver e-mail is correct
+  + the e-mail is sent to the right e-mail address
+  + the e-mail contains the required information
+  ```ruby
+  describe SubscriberMailer do
+    let(:subscriber) { double(Subscription, email: 'johndoe@test.com', name: 'John Doe') }
+
+    describe 'successful registration email' do
+      subject { SubscriptionMailer.successful_registration_email(subscriber) }
+
+      its(:subject) { should == 'Successful Registration!' }
+      its(:from) { should == ['info@your_site.com'] }
+      its(:to) { should == [subscriber.email] }
+
+      it 'contains the subscriber name' do
+        expect(subject.body.encoded).to match(subscriber.name)
+      end
+    end
+  end
+  ```
+
   
   
   
