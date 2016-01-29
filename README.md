@@ -5,7 +5,6 @@
 loop.do{puts"hello,world!"}
 #Example of bad code style!
 ```
-[TOC]
 
 #Ruby
 ##Syntaxes
@@ -534,10 +533,11 @@ class Movie < ActiveRecord::Base
 end
 ```
 + Time.zone.today instead of Date.today
++ 
 
 ----------
 
-# R-Spec coding styles
+# R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
 ```ruby
 describe 'foo' do
@@ -739,7 +739,7 @@ let(:article) { FactoryGirl.create(:article) }
 # ... instead of this:
 before { @article = FactoryGirl.create(:article) }
 ```
-##Views
+## Views
 
 + The directory structure of the view specs spec/views matches the one in app/views. 
 + For example the specs for the views in app/views/users are placed in spec/views/users.
@@ -1007,7 +1007,7 @@ end
   
   
   
-  #References
+  # References
   1. [Ruby Coding Styles](https://github.com/bbatsov/ruby-style-guide#no-dsl-decorating)
   2. [Rails Coding Styles](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
   3. [Mistakes A Rails Programmer Makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
