@@ -532,8 +532,42 @@ class Movie < ActiveRecord::Base
   end
 end
 ```
-+ Time.zone.today instead of Date.today
-+ 
++ Model sequence
+```ruby
+  class User < ActiveRecord::Base
+  # keep the default scope first (if any)
+  default_scope { where(active: true) }
+
+  # constants come up next
+  COLORS = %w(red green blue)
+
+  # afterwards we put attr related macros
+  attr_accessor :formatted_date_of_birth
+
+  attr_accessible :login, :first_name, :last_name, :email, :password
+
+  # followed by association macros
+  belongs_to :country
+
+  has_many :authentications, dependent: :destroy
+
+  # and validation macros
+  validates :email, presence: true
+  validates :username, presence: true
+  validates :username, uniqueness: { case_sensitive: false }
+  validates :username, format: { with: /\A[A-Za-z][A-Za-z0-9._-]{2,19}\z/ }
+  validates :password, format: { with: /\A\S{8,128}\z/, allow_nil: true }
+
+  # next we have callbacks
+  before_save :cook
+  before_save :update_username_lower
+
+  # other macros (like devise's) should be placed after the callbacks
+
+  ...
+end
+```
++ Use `self` instead of `read_attribute` or `write_attribute`
 
 ----------
 
