@@ -590,6 +590,69 @@ class User < ActiveRecord::Base
   validates :email, presence: true
 end
 ```
++ Custom validation
+  + Create when validation is used more than once / RegEx
+  ```ruby
+  class EmailformatValidator < ActiveRecord::EachValidator
+    def validate_each(record, attribute, &valueO)
+      record.errors[:attribute] << (options(message) || "is not a valid email" unless value =~               /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+    end
+  end
+  
+  class User
+  validates :email, emailformat: true
+  ```
+  + Keep these classes under directory app/validators
++ Use scopes freely
+```ruby
+  class User < ActiveRecord::base
+    scope(:active), -> { where(active: true) }
+    scope(:status), -> status { where(status: status) }
+  end
+```
++ Unless scopes get very complicated with lambda (readability), use class method instead
+```ruby
+  class User < ActiveRecord::base
+    def self.with_orders
+    joins(:orders).select('distinct(users.id)')
+  end
+```
++ Use `find_each` over `all` or `each` for iterating over ActiveRecord objects
+```ruby
+User.find_each do |user|
+  user.party
+end
+
+User.where('age > 21').find_each do |user|
+  user.drink
+end
+```
++ Rails creates callback for dependant associations and is executed before `before_destory` callback. To override this, use `prepend: true`
+```ruby
+class Classroom < ActiveRecord::Base
+  has_many :student, dependent: destroy
+
+  before_destroy :grade_fail, prepend: true
+
+  private
+    def grade_fail
+      student.pass_test?
+    end
+end
+```
+## ActiveRecord queries
++ Avoid string interpolation in queries (prone to SQL injections). 
+```ruby
+Admin.where('permission = ?',params[:permission]
+```
++ Use `find` over `where`
+```ruby
+User.find(id)
+```
++ Use `find_by` for multiple attributes
+```ruby
+User.find_by(first_name: hello, last_name: kitty)
+```
 +
 ----------
 # R-Spec 
