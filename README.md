@@ -568,9 +568,30 @@ end
 end
 ```
 + Use `self` instead of `read_attribute` or `write_attribute`
+```ruby
+def convert_amount
+  self[:amount] * 100
+end
 
+def set_amount
+  self[:amount] = 100
+end
+```
++ Avoid old validation style
+```ruby
+class User < ActiveRecord::Base
+  # old style
+  validates_presence_of :email
+  validates_presence_of :name
+  validates_length of :name, maximum: 30
+  
+  # new style
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :email, presence: true
+end
+```
++
 ----------
-
 # R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
 ```ruby
