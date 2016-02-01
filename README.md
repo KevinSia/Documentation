@@ -443,7 +443,7 @@ regexp = /
   end
 /x
 ```
-------
+--------------------------------------------------------------------------------------------------
 # Rails
 
 ## Configuration
@@ -643,7 +643,7 @@ end
 ## ActiveRecord queries
 + Avoid string interpolation in queries (prone to SQL injections). 
 ```ruby
-Admin.where('permission = ?',params[:permission]
+Admin.where('permission = ?',params[:permission])
 ```
 + Use `find` over `where`
 ```ruby
@@ -653,8 +653,14 @@ User.find(id)
 ```ruby
 User.find_by(first_name: hello, last_name: kitty)
 ```
-+
-----------
++ Use `find_each` to iterate through data
+```ruby
+User.find_each do |user|
+  'Hi #{user.name}!'
+end
+```
++ 
+--------------------------------------------------------------------------------------------------
 # R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
 ```ruby
