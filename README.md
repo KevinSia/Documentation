@@ -85,7 +85,7 @@ str = 'We wish you a merry christmas, ' +
       'we wish you a merry christmas, ' +
       'and a happy new year!'
 ```
-+ method chaining (by Law of Demeter, nope)
++ method chaining (Law of Demeter*)
 ```ruby
 one.two.three
   .four
@@ -379,7 +379,7 @@ hash.key?(:key)
 hash.value?(value)
 
 # Use each_key and each_value instead of key.each or value.each
-hash.each_key {|k| puts k}
+hash.each_key { |k| puts k }
 ```
 + If value existence is important , use `fetch` instead
 ```ruby
@@ -425,7 +425,7 @@ email_with_name = "#{user.name} #{user.email}
 ```ruby
 names = ''
 
-name_list.each { |n| name << #{n} }
+name_list.each { |n| name << "#{n}" }
 ```
 + Avoid `gsub` if possible (use gsub for regex)
 ```ruby
