@@ -653,7 +653,7 @@ User.find(id)
 ```ruby
 User.find_by(first_name: hello, last_name: kitty)
 ```
-+ Use `find_each` to iterate through data
++ Use `find_each` to iterate through datas
 ```ruby
 User.find_each do |user|
   'Hi #{user.name}!'
@@ -664,7 +664,7 @@ end
 User.where.not(id: id)
 ```
 ## Migrations
-+ Use `change` method instead of `up` and `down` (old style)
++ Use `change` method instead of `up` and `down` when writing constructive migrations.
 ```ruby
 class AddInterestToUser < ActiveRecord::Migration
   def change
@@ -672,7 +672,11 @@ class AddInterestToUser < ActiveRecord::Migration
   end
 end
 ```
-+
++ Avoid using model classes in migrations as the model changes often.
++ 
+## Views
++ DRY up your code by using layouts and partials
++ 
 --------------------------------------------------------------------------------------------------
 # R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
@@ -694,7 +698,7 @@ describe 'qux' do
   # code something
 end
 ```
-+ Leave one line around `if` blocks
++ Leave one line around `it` blocks
 ```ruby
 describe '#pay_debt do
   it 'returns money' do
