@@ -659,7 +659,20 @@ User.find_each do |user|
   'Hi #{user.name}!'
 end
 ```
-+ 
++ Use `where.not` over `!=`
+```ruby
+User.where.not(id: id)
+```
+## Migrations
++ Use `change` method instead of `up` and `down` (old style)
+```ruby
+class AddInterestToUser < ActiveRecord::Migration
+  def change
+    add_column :users, :height, :string
+  end
+end
+```
++
 --------------------------------------------------------------------------------------------------
 # R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
