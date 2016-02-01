@@ -77,7 +77,7 @@ def some_method; end
       do another thing
     end
   ```
-+ Keep to 80 chars per line (tweak subline to show limit line)
++ Keep to 80 chars per line (tweak sublime to show limit line)
 + Long string concatenation
 ```ruby
 str = 'We wish you a merry christmas, ' +
