@@ -675,8 +675,18 @@ end
 + Avoid using model classes in migrations as the model changes often.
 + 
 ## Views
-+ DRY up your code by using layouts and partials
-+ 
++ DRY up your code by using layouts and partials.
++ Never make complex formatting in the views, export the formatting to a method in the view helper or the model.
++ Never call model layer directly from view.
+
+## Assets
++ Reserve app/assets for custom stylesheets, javascripts, or images.
++ Use lib/assets for your own libraries that don’t really fit into the scope of the application. 
++ Third party code such as jQuery or bootstrap should be placed in vendor/assets. 
++ When possible, use gemified versions of assets (e.g. jquery-rails, jquery-ui-rails, bootstrap-sass, zurb-foundation). 
+
+
+
 --------------------------------------------------------------------------------------------------
 # R-Spec 
 + No empty lines below `describe`, `context`, or `feature`
@@ -883,7 +893,7 @@ before { @article = FactoryGirl.create(:article) }
 ## Views
 
 + The directory structure of the view specs spec/views matches the one in app/views. 
-+ For example the specs for the views in app/views/users are placed in spec/views/users.
+  + For example the specs for the views in app/views/users are placed in spec/views/users.
 + The naming convention for the view specs is adding `_spec.rb` to the view name, for example the view `_form.html.erb` has a corresponding spec `_form.html.erb_spec.rb`.
 + spec_helper.rb needs to be required in each view spec file.
 
