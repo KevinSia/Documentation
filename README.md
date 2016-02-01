@@ -450,6 +450,7 @@ regexp = /
 + Keep initialization file in seperate file and name it with gem's name 
   + Example: `clearance.rb` , `carrierwave.rb` 
 + Keep configuration that's applicable to all environments in the config/application.rb file. 
+
 ## Routes
 + Use `member`/`collection` routes to add action into RESTful resource
 ```ruby
