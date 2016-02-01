@@ -1,5 +1,8 @@
 #Ruby & Rails Coding Style Documentation
 
+1. [Ruby](#Ruby)
+2. [Rails](#Rails)
+
   
 ```
 loop.do{puts"hello,world!"}
@@ -491,6 +494,7 @@ end
     end
   end
   ```
+
 ## Controller
 + Keep the controller skinny
   + Controller should only be used to
