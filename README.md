@@ -1,7 +1,7 @@
 #Ruby & Rails Coding Style Documentation
 
-1. [Ruby](#Ruby)
-2. [Rails](#Rails)
+1. [Ruby](#ruby)
+2. [Rails](#rails)
 
   
 ```
