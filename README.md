@@ -473,7 +473,6 @@ end
   end
   
   resources :comments, only: [:show, :edit, :update, :destroy]
-  
   ```
 
 ## Controller
@@ -521,30 +520,30 @@ end
 + Model sequence
 ```ruby
   class User < ActiveRecord::Base
-  # keep the default scope first (if any)
-  default_scope { where(active: true) }
+  # 1. Scopes
+ `scope :active, -> { where(active: true) }
 
-  # constants come up next
+  # 2. Constants, enums
   COLORS = %w(red green blue)
 
-  # afterwards we put attr related macros
+  # 3. Attr related macros
   attr_accessor :formatted_date_of_birth
 
   attr_accessible :login, :first_name, :last_name, :email, :password
 
-  # followed by association macros
+  # 4. Association macros
   belongs_to :country
 
   has_many :authentications, dependent: :destroy
 
-  # and validation macros
+  # 5. Validation macros
   validates :email, presence: true
   validates :username, presence: true
   validates :username, uniqueness: { case_sensitive: false }
   validates :username, format: { with: /\A[A-Za-z][A-Za-z0-9._-]{2,19}\z/ }
   validates :password, format: { with: /\A\S{8,128}\z/, allow_nil: true }
 
-  # next we have callbacks
+  # 6. Callbacks
   before_save :cook
   before_save :update_username_lower
 
@@ -553,6 +552,7 @@ end
   ...
 end
 ```
+
 + Use `self` instead of `read_attribute` or `write_attribute`
 ```ruby
 def convert_amount
@@ -563,7 +563,7 @@ def set_amount
   self[:amount] = 100
 end
 ```
-+ Avoid old validation style
++ New validation style
 ```ruby
 class User < ActiveRecord::Base
   # old style
@@ -579,28 +579,47 @@ end
 + Custom validation
   + Create when validation is used more than once / RegEx
   ```ruby
-  class EmailformatValidator < ActiveRecord::EachValidator
-    def validate_each(record, attribute, &valueO)
-      record.errors[:attribute] << (options(message) || "is not a valid email" unless value =~               /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  class EmailFormatValidator < ActiveRecord::EachValidator
+    def validate_each(record, attribute, value)
+      record.errors[:attribute] << (options(message) || "is not a valid email") unless value =~                        /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
     end
   end
   
   class User
-  validates :email, emailformat: true
+    validates :email, emailformat: true
+  end
   ```
   + Keep these classes under directory app/validators
++ Do not use default_scope 
+  1. It affects model initialization
+  2. By doing unscoped, all scopes are removed, including associations 
+  ```ruby
+  class Post < ActiveRecord::Base
+    default_scope { where(published: true) }
+    belongs_to :user
+  end
+  
+  class User < ActiveRecord::Base
+    has_many :posts
+  end
+  ```
+  
+  ```ruby
+  2.2.4 :001 > Post.new
+  => #<Post id: nil, title: nil, published: true, created_at: nil, updated_at: nil>
+  
+  2.2.4 :002 > User.first.post
+  => Post Load (0.3ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."published" = 't' AND "posts"."user_id" = ?  [["user_id", 1]]
+  
+  # To load a users with both published and unpublished, use unscoped 
+  2.2.4: 003 > User.first.post.unscoped #user scope is gone
+  => Post Load (0.3ms)  SELECT "posts".* FROM "posts" 
+  ```
 + Use scopes freely
 ```ruby
   class User < ActiveRecord::base
     scope(:active), -> { where(active: true) }
     scope(:status), -> status { where(status: status) }
-  end
-```
-+ Unless scopes get very complicated with lambda (readability), use class method instead
-```ruby
-  class User < ActiveRecord::base
-    def self.with_orders
-    joins(:orders).select('distinct(users.id)')
   end
 ```
 + Use `find_each` over `all` or `each` for iterating over ActiveRecord objects
@@ -631,6 +650,11 @@ end
 + Avoid string interpolation in queries (prone to SQL injections). 
 ```ruby
 Admin.where('permission = ?',params[:permission])
+
+Client.where(
+  'created_at >= :start_date AND created_at <= :end_date',
+  start_date: params[:start_date], end_date: params[:end_date]
+)
 ```
 + Use `find` over `where`
 ```ruby
