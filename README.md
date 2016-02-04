@@ -11,7 +11,7 @@ loop.do{puts"hello,world!"}
 ```
 
 #Ruby
-##Syntaxes
+##Layout
 
 + 2 spaces indentation with soft tabs
   + Sublime settings: open up a rubyfile -> preferences > settings-more > syntax specific-user
@@ -39,7 +39,8 @@ def some_method; end
 + Spaces
   + Between operators
   ```ruby
-  1 + 1 or foo == bar
+  1 + 1 
+  foo == bar
   def some_method(arg1 = :default, arg2 = :default2); end
   ```
   + After commas, colons, and semicolons 
@@ -66,7 +67,7 @@ def some_method; end
   1..5
   ```
 + `case-when` & `if-else`
-  + case and when syntax same indentation
+  + `case` and `when` syntax align
   ```ruby
   case
   when statement1
@@ -77,17 +78,21 @@ def some_method; end
     puts 'baz'
   end
   ```
-  + assigning with `if-else` (putting in on next line makes it efficient to read)
+  + assigning with `if-else`
   ```ruby
+  #condition same line with syntax
   result =
-    #condition same line with syntax
     if condition1   
       do something12
     else 
       do another thing
     end
   ```
-+ Keep to 80 chars per line (tweak sublime to show limit line)
++ Keep to 80 chars per line 
++ Avoid trailing whitespaces 
++ End file with a new line
++ [Link to tweak sublime settings](https://github.com/hollowaykeanho/learning/blob/master/sublime/tools/default.sublime)
+
 + Long string concatenation
 ```ruby
 str = 'We wish you a merry christmas, ' +
@@ -122,10 +127,6 @@ menu_item =
 1000000000 # What value is this?
 1_000_000_000 # A billion
 ````
-+ avoid trailing whitespaces (sneaky)(sublime plugin?)
-```ruby
-Hello world!        
-```
 + Multiple assignments
 ```ruby
 a = 'foo'
@@ -137,7 +138,7 @@ d = 'qux'
 ```ruby
 result = condition ? short_expression : short_expression2
 ```
-+ But not the case for nested conditions
++ Use `if` to nest ternary operators
 ```ruby
 if condition1
   nested_condition ? nested1 : nested2
@@ -152,7 +153,7 @@ if !!x
   do_something
 end
 
-# instead do as below
+# instead use methods
 x = 'text
 
 unless x.nil?
@@ -161,15 +162,16 @@ end
 ```
 + Use modifier `if` or `unless` for one expression body
 ```ruby
-do_something if condition
-do_something unless condition
+do_something if some_condition
+do_something unless some_condition
 ```
 
-+ Try single-line control flow (`||` and `&&`)
++ Single-line control flow (`||` and `&&`)
 ```ruby
 document.saved? || document.save!
 
-some_condition && do_something
+some_condition && do_something (similiar to if)
+some_condition || do_something (similiar to unless)
 ```
 
 + No parentheses in `if` condition unless involves assignment 
@@ -1176,5 +1178,6 @@ end
   3. [Mistakes A Rails Programmer Makes](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)
   4. [R-spec Style Guide](https://github.com/reachlocal/rspec-style-guide)
   5. [Better Specs](http://betterspecs.org/)
+  6. [Sublime settings from Holloway](https://github.com/hollowaykeanho/learning/blob/master/sublime/tools/default.sublime)
   
 
