@@ -170,27 +170,21 @@ do_something unless some_condition
 ```ruby
 document.saved? || document.save!
 
-some_condition && do_something (similiar to if)
-some_condition || do_something (similiar to unless)
+some_condition && do_something (similiar to using if)
+some_condition || do_something (similiar to using unless)
 ```
 
 + No parentheses in `if` condition unless involves assignment 
 ```ruby
 if condition
-  do something
+  # do something
 end
 
 if ( v = array.grep(Integer) )
-  do something
+  # do something
 end
 ```
 + Use `&&` and `||` instead of `and` and `or`
-+ Use `loop` instead of while/until for infinite loop
-```ruby
-loop do
-  do something
-end
-```
 + Use the proc invocation shorthand when the invoked method is the only operation of a block. 
 ```ruby
 # bad
@@ -198,23 +192,6 @@ names.map { |name| name.upcase }
 
 # good
 names.map(&:upcase)
-```
-+ Avoid nested methods. 
-```ruby
-# Good but no bar redefinition on every foo call.
-def bar(y)
-  # Body omitted
-end
-
-def foo(x)
-  bar(x)
-end
-
-# This is also good.
-def foo(x)
-  bar = ->(y) { ... }
-  bar.call(x)
-end
 ```
 + Prefix with _ for unused block parameters and local variables
 ```ruby
@@ -225,13 +202,13 @@ def something(x)
   # ...
 end
 ```
-+ Use guard clause if possible (bails out of function asap)
++ Use guard clause if possible 
 ```ruby
-def compute_thing(thing)
-  return unless thing[:foo]
-  update_with_bar(thing[:foo])
-  return re_compute(thing) unless thing[:foo][:bar]
-  partial_compute(thing)
+def require_admin
+  return if current_user && current_user.role == 'admin'
+
+  flash[:error] = "You are not an admin!"
+  redirect_to photos_path
 end
 ```
 + `next` in loops vs `if-else`
@@ -283,6 +260,7 @@ end
 ```
 ## Comments & Comment Annotations
 + Write comments in English!
++ One space after the leading `#`
 + Keep comments up-to-date
 + Use annotation keywords while describing problem to indicate problem type
   + Example:
@@ -300,8 +278,7 @@ end
   + Use `REVIEW` to note anything that should be looked at to confirm it is working as intended. 
   + Create own annotation keywords here?
   ```ruby
-  # REVIEW: Are we sure this is how the client 
-  #   does X currently? 
+  # REVIEW: Are we sure this is we want to do it?
   ```
   + For multiple line annotations, use 1+2 (or 3) indentation for subsequent lines (1 after `#`, 2 for general indent)
 ## Classes and modules
@@ -641,12 +618,13 @@ end
 class Classroom < ActiveRecord::Base
   has_many :student, dependent: destroy
 
-  before_destroy :grade_fail, prepend: true
+  before_destroy :remember_students, prepend: true
 
   private
-    def grade_fail
-      student.pass_test?
-    end
+  
+  def remember_students
+    student.naughthy?
+  end
 end
 ```
 ## ActiveRecord queries
