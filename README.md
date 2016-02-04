@@ -199,16 +199,6 @@ names.map { |name| name.upcase }
 # good
 names.map(&:upcase)
 ```
-+ Avoid `self` when not required (except when self write accessor)
-```ruby
-def ready?
-  if last_reviewed_at > last_updated_at
-    worker.update(content, options)
-    self.status = :in_progress
-  end
-  status == :verified
-end
-```
 + Avoid nested methods. 
 ```ruby
 # Good but no bar redefinition on every foo call.
@@ -497,11 +487,16 @@ end
 + Resources should never be nested more than 1 level deep
   + Use shallow: true if must to avoid long path_name and urls
   ```ruby
-  resources :posts, shallow: true do
-    resources :comments do
-      resources :versions
-    end
+  resources :posts do
+    resources :comments, shallow: true 
   end
+  
+  resources :posts do
+    resources :comments, only: [:index, :new, :create]
+  end
+  
+  resources :comments, only: [:show, :edit, :update, :destroy]
+  
   ```
 
 ## Controller
