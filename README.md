@@ -18,7 +18,13 @@ if something
 ..do something
 end
 ```
-
+  + rubyfile -> preferences > settings-more > syntax specific-user
+  ```ruby
+  {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true
+  }
+  ```
 + One expression per line
 ```ruby 
 def some_method
