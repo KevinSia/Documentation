@@ -1,4 +1,4 @@
-#Ruby & Rails Coding Style Documentation
+#RRR Coding Style Documentation
 
 1. [Ruby](#ruby)
 2. [Rails](#rails)
@@ -953,10 +953,12 @@ before { @article = FactoryGirl.create(:article) }
       # ...
     end
   end
-
+```
+```ruby
   # app/views/articles/show.html.erb
   <%= 'Published at: #{formatted_date(@article.published_at)}' %>
-
+```
+```ruby
   # spec/views/articles/show.html.erb_spec.rb
   describe 'articles/show.html.erb' do
     it 'displays the formatted date of article publishing' do
