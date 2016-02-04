@@ -2,9 +2,10 @@
 
 1. [Ruby](#ruby)
 2. [Rails](#rails)
+3. [R-spec](#r-spec)
 
   
-```
+```ruby
 loop.do{puts"hello,world!"}
 #Example of bad code style!
 ```
@@ -13,18 +14,18 @@ loop.do{puts"hello,world!"}
 ##Syntaxes
 
 + 2 spaces indentation with soft tabs
-```ruby
-if something
-..do something
-end
-```
-  + rubyfile -> preferences > settings-more > syntax specific-user
+  + Sublime settings: open up a rubyfile -> preferences > settings-more > syntax specific-user
   ```ruby
   {
     "tab_size": 2,
     "translate_tabs_to_spaces": true
   }
-  ```
+  ``` 
+```ruby
+if something
+..do something
+end
+```
 + One expression per line
 ```ruby 
 def some_method
@@ -248,7 +249,7 @@ end
   puts item
 end
 ```
-## The art of naming in ruby / rails
+## Naming conventions
 + use snake_case for 
   + symbols, methods, and variables
   ```ruby
