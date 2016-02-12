@@ -558,8 +558,12 @@ end
   # Eg: stories can belong to many categories
   # categories have many stories
   
-  # Incorrect table name : Stories_Categories
-  # Correct table name   : Categories_Stories
+  # Incorrect table name : stories_categories
+  # Correct table name   : categories_stories
+  
+  # Eg 2: paper_boxes and papers
+  
+  # Correct table name : paper_boxes_papers
   ```
 
 + Use `self` instead of `read_attribute` or `write_attribute`
