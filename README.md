@@ -552,6 +552,15 @@ end
   ...
 end
 ```
++ `has_and_belongs_to_many`
+  +  Name the relationship model according to alphabetical order
+  ```ruby
+  # Eg: stories can belong to many categories
+  # categories have many stories
+  
+  # Incorrect table name : Stories_Categories
+  # Correct table name   : Categories_Stories
+  ```
 
 + Use `self` instead of `read_attribute` or `write_attribute`
 ```ruby
