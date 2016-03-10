@@ -14,10 +14,10 @@ User
 -----> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
 
 Permissions (table form):
-Superadmin : Can create any type of user, courses, topics, challenges, see students progress
-Admin      : Can create mentor and student user, courses, topics, challenges, see students progress
-Mentor     : Can see students progress
-Student    : Can suffer
+Superadmin : Can create any type of User, Courses, Topics, Challenges, see Students progress
+Admin      : Can create Mentor and student User, Courses, Topics, Challenges, see Students progress
+Mentor     : Can see Students progress
+Student    : Can attempt a Challenge and enjoy coding :)
 
 # Admin User settings
 ## First-time sign in
@@ -30,7 +30,7 @@ Student    : Can suffer
 -------------
 
 ## Navigation Bar
-### NEXT Academy Logo :)
+### NEXT Academy Learning Portal Logo :)
 ### Courses 
 - Clicking a course will redirect you to the courses dashboard
 
@@ -108,24 +108,38 @@ Student    : Can suffer
   - **Email**        -> User's email address
 
 ### Dashboard
-- It's a dashboard :)
+- It's a dashboard for students to access NEXT Academy's syllabus :)
 - To access **Dashboard**:
   - Nav Bar -> Courses -> choose your Course 
-- **Current Progress** will show the latest challenge the student has attemtped
+- **Current Progress** will show the latest challenge you has attemtped
 - **Start Challenge** button / **Continue Challenge** button:
-  - Students can start the available Challenge (and create an **Attempt**) with this button.
-  - Students can continue where they left off. 
+  - You can start the available Challenge (and create an **Attempt**) with this button.
+  - You can continue where they left off. 
 - **Timeline** 
   - Each _Green Dot_ represents a **Topic** 
   - Pressing it with open a list of **Challenges**
-  - Students cannot get access to the next Topic if they have not complete the Challenges for previous Topic
-  - 
+  - You will not be able to access to the next Topic if you have not complete the Challenges for previous Topic
+
+### Attempts for individual challenge
+- Upon pressing _start challenge_, an attempt will be created for that Student on that Challenge
+- In GitLab, the Challenge's repository in git.nextacademy.com will be forked to the Student's repository
 
 ### Pair programming
+- In the early phase of the bootcamp, students are encouraged to practice **Pair Programming**
+- To log in a second user
+  - Go to Settings -> Log In Second User
+
+### GitLab Repository
+- Access permission for GitLab repository should be `internal`
+
+### Code Review
+- Students will be redirected to **Code Review** section after they clicked _Complete Challenge_
+- Must comment? or Review and click to return to Dashboard?
 
 
 ### UX problem/issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page h1 is still create new student
 - After create new user error, password reset field is shown
+- Shall we give the student a ~~freakin~~ cool name?
 
