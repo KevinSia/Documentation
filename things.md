@@ -1,7 +1,22 @@
 # Guide to the NEXT Learning Portal (pun intended)
 
-Index
+Table of Contents
 ---
+
+* [Admin](#admin-user-settings)
+  * [Navigation Bar](#navigation-bar) 
+    * [Assessments](#assessments)
+    * [Settings](#settings)
+  * [Managing Course](#managing-courses)
+  * [Managing Topic](#managing-topics)
+  * [Managing Challenge](#managing-challenges)
+  * [Managing Users](#managing-users)
+  * [Dashboard](#dashboard)
+  * [Challenge Attempts](#attempts-for-individual-challenge)
+* [Pair Programming](#pair-programing)
+* [Gitlab Repository](#gitlab-repository)
+* [Code Review](#code-review)
+* [Problems](#problem/issue-discovered)
 
 Structure of the learning portal
 
@@ -18,6 +33,14 @@ Superadmin : Can create any type of User, Courses, Topics, Challenges, see Stude
 Admin      : Can create Mentor and student User, Courses, Topics, Challenges, see Students progress
 Mentor     : Can see Students progress
 Student    : Can attempt a Challenge and enjoy coding :)
+
+|    Role    | Create syllabus   |     Create user       | See student's progress   | 
+|------------|:-----------------:|-----------------------|:------------------------:|
+| Superadmin |       Yes         |  Admin,Mentor,Student |          Yes             |
+|   Admin    |       Yes         |  Mentor,Student       |          Yes             |
+|   Mentor   |       No          |  Student              |          Yes             |
+|   Student  |       No          |  None                 |          Yes             |
+
 
 # Admin User settings
 ## First-time sign in
@@ -45,7 +68,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - Edit my account -> Edit your details and password
 
 
-### Managing _Course_
+### Managing _Courses_
 - To **Manage Courses**
 - The Course index page will have a **list of courses** 
 - Each of the Courses has 4 options:
@@ -91,7 +114,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
   - ????
 
   
-### Managing _Users (Admin, Mentor, Student)_
+### Managing _Users_ (Admin, Mentor, Student)_
 - To **Manage Users**:
   - Settings -> Manage Users
   - A list of Users will appear with the following options:
@@ -137,7 +160,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - Must comment? or Review and click to return to Dashboard?
 
 
-### UX problem/issue discovered
+### Problem/issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page h1 is still create new student
 - After create new user error, password reset field is shown
