@@ -30,6 +30,7 @@ Student    : Can suffer
 -------------
 
 ## Navigation Bar
+### NEXT Academy Logo :)
 ### Courses 
 - Clicking a course will redirect you to the courses dashboard
 
@@ -37,7 +38,7 @@ Student    : Can suffer
 - See students submitted attempt
 
 ### Settings
-- Manage course   -> Course index page
+- Manage course   -> Course dashboard
 - Manage user     -> List of students and admins
 - My profile      -> Shows your profile and achievements
 - Add SSH key     ->  #
@@ -91,15 +92,15 @@ Student    : Can suffer
 
   
 ### Managing _Users (Admin, Mentor, Student)_
-- To **Manage Users*:
+- To **Manage Users**:
   - Settings -> Manage Users
   - A list of Users will appear with the following options:
     - **Profile**          -> shows the User's profile and achievements
     - **Edit**             -> edits the User's profile and **reset User's password**
     - **Authorize GitLab** -> authorize User in GitLab to be able to fork repo
     - **Delete**           -> deletes a User
-- To **Add a user*
-  - Press *+ Add New User* located on top-right
+- To **Add a user**
+  - Press **+ Add New User** located on top-right
   - **Course**       -> Assigning the User to the course
   - **Role**         -> Sets the role for the User (admin, mentor, student)
   - **First name**   -> User's first name
@@ -107,6 +108,18 @@ Student    : Can suffer
   - **Email**        -> User's email address
 
 ### Dashboard
+- It's a dashboard :)
+- To access **Dashboard**:
+  - Nav Bar -> Courses -> choose your Course 
+- **Current Progress** will show the latest challenge the student has attemtped
+- **Start Challenge** button / **Continue Challenge** button:
+  - Students can start the available Challenge (and create an **Attempt**) with this button.
+  - Students can continue where they left off. 
+- **Timeline** 
+  - Each _Green Dot_ represents a **Topic** 
+  - Pressing it with open a list of **Challenges**
+  - Students cannot get access to the next Topic if they have not complete the Challenges for previous Topic
+  - 
 
 ### Pair programming
 
