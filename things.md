@@ -39,7 +39,7 @@ Student    : Can suffer
 ### Settings
 - Manage course   -> Course index page
 - Manage user     -> List of students and admins
-- My profile      -> Shows your profile
+- My profile      -> Shows your profile and achievements
 - Add SSH key     ->  #
 - Edit my account -> Edit your details and password
 
@@ -75,33 +75,44 @@ Student    : Can suffer
 - To **Add a Challenge**:
   - Press challenge under the topic -> Add new Challenges
   - **Labels** A Challenge will have one of the three _labels_:
-    - **_Lecture_**  -> Will contain lecture notes and theories
-    - **_Core_**     -> Will be the challenge that students _must complete_
-    - **_Optional_** -> Tough challenges for students who are willing to take on
-  - **_Order_** is the order of the challenge. The Challenges will be sorted according to it's order.
-  - **_Video URL_** is the link for the introductory video (can be blank)
-  - **_Gitlab Repo_** is the link for the link of the repo that contains the Challenge's code
-  - **_Description_** is the description / short introduction / guidance for the Challenge
+    - **_Lecture_**     -> Will contain lecture notes and theories
+    - **_Core_**        -> Will be the challenge that students _must complete_
+    - **_Optional_**    -> Tough Challenges for students who aren't afraid of losing
+  - **_Order_**         -> order of the challenge. The Challenges will be sorted according to it's order.
+  - **_Video URL_**     -> link for the introductory video (can be blank)
+  - **_Gitlab Repo_**   -> link for the link of the repo that contains the Challenge's code
+  - **_Description_**   -> description / short introduction / guidance for the Challenge
 - To **Edit a challenge** :
   - Go to the Topic that the Challenge belongs to -> Click on the Challenge name
 - To **Delete a challenge** :
-  - Go to edit Challenge -> Click on the red trash bin icon
+  - Go to edit Challenge -> Click on the _Red trash bin icon_
 - To **Update instructions** :
   - ????
 
   
-### Managing _Users (Mentor, Admin, Student)_
+### Managing _Users (Admin, Mentor, Student)_
 - To **Manage Users*:
   - Settings -> Manage Users
+  - A list of Users will appear with the following options:
+    - **Profile**          -> shows the User's profile and achievements
+    - **Edit**             -> edits the User's profile and **reset User's password**
+    - **Authorize GitLab** -> authorize User in GitLab to be able to fork repo
+    - **Delete**           -> deletes a User
 - To **Add a user*
-  - Press the yellow button on top-right
-  - 
-### Pair programming
+  - Press *+ Add New User* located on top-right
+  - **Course**       -> Assigning the User to the course
+  - **Role**         -> Sets the role for the User (admin, mentor, student)
+  - **First name**   -> User's first name
+  - **Last name**    -> User's last name (will be combined with first name and become username before User edits)
+  - **Email**        -> User's email address
+
 ### Dashboard
+
+### Pair programming
 
 
 ### UX problem/issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
-- Create new user page h1 is still create new studentd
+- Create new user page h1 is still create new student
 - After create new user error, password reset field is shown
 
