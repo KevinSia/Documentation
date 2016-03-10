@@ -73,19 +73,19 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - The Course index page will have a **list of courses** 
 - Each of the Courses has 4 options:
     - **Preview** page of the Course (Eye open icon).
-    - **Stats** for the progress of the Course's student
-    - **Edit** Course.
-    - **Delete** Course.
-- To **add a new course** press the _yellow button_ on top-right.
+    - **Stats** for the progress of the Course's student (Graph icon)
+    - **Edit** Course. (Pencil icon)
+    - **Delete** Course. (Trash bin icon)
+- To **add a new course** press the _yellow Add new course_ button on top-right.
 --------
 
 ### Managing _Topics_
 - To **Manage Topic**
   - Press the edit course button for the Course that the Topic belongs to
 - To **Add a topic**
-  - Press the _yellow_ button at the bottom.
+  - Press the _yellow Add a topic_ button at the bottom.
 - To **Remove a topic**
-  - Press the _red_ button in the Topic itself.
+  - Press the _red Remove topic_ button in the Topic itself.
 - **Order** will determine the _order of the topic_. The Topics will be sorted according to it's order.
 - Topics shall not have the same **order**. 
   - Topics with duplicate orders will prevent from the Course to be updated.
