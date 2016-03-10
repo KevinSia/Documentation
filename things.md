@@ -47,10 +47,8 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - **Log in** with your credentials
 - You will then be prompt to do a **one-time update** for your:
   - Username
-  - Make a new password
-- You will then be then be redirected to Managing Courses page 
-- 
--------------
+  - A new password
+-------
 
 ## Navigation Bar
 ### NEXT Academy Learning Portal Logo :)
