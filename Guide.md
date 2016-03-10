@@ -18,9 +18,8 @@ Table of Contents
 * [Code Review](#code-review)
 * [Issues](#issue-discovered)
 
-Structure of the learning portal
-
-User 
+Structure of the syllabus:
+> User 
 
 -> Courses (Full Stack Bootcamp, iOS Bootcamp etc.)
 
@@ -28,11 +27,6 @@ User
 
 -----> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
 
-Permissions (table form):
-Superadmin : Can create any type of User, Courses, Topics, Challenges, see Students progress
-Admin      : Can create Mentor and student User, Courses, Topics, Challenges, see Students progress
-Mentor     : Can see Students progress
-Student    : Can attempt a Challenge and enjoy coding :)
 
 |    Role    | Create Course     | Create Topic/Challenges   |     Create user        | See student's progress   | 
 |------------|:-----------------:|:-------------------------:|------------------------|:------------------------:|
@@ -60,8 +54,8 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - See students submitted attempt
 
 ### Settings
-- **Manage course**   -> Course dashboard
-- **Manage user**     -> List of students and admins
+- **Manage courses**   -> Course dashboard
+- **Manage users**     -> List of students and admins
 - **My profile**      -> Shows your profile and achievements
 - **Add SSH key**     -> add SSH key for your device ( not needed for admins )
 - **Edit my account** -> Edit your details and password
@@ -69,7 +63,8 @@ Student    : Can attempt a Challenge and enjoy coding :)
 
 ### Managing _Courses_
 ----
-- To **Manage Courses**
+- To **Manage Courses**:
+ - Settings -> Manage courses
 - The Course index page will have a **list of courses** 
 - Each of the Courses has 4 options:
     - **Preview** page of the Course (Eye open icon).
@@ -163,7 +158,6 @@ ___
 
 ## Issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
-- Create new user page h1 is still create new student
-- After create new user error, password reset field is shown
+- Create new user page header is still create new student (instead of create new user)
 - Shall we give the student a ~~freakin~~ cool name?
 
