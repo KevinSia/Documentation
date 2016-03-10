@@ -5,6 +5,8 @@ Index
 
 Structure of the learning portal data's
 
+User 
+
 -> Courses (Full Stack Bootcamp, iOS Bootcamp etc.)
 
 ---> Topics (Ruby, SQL, Sinatra, Rails etc.)
@@ -47,7 +49,7 @@ Structure of the learning portal data's
 
 --------
 
-### Editing _Course_ and it`s _Topics_
+### Editing _Course_ and it's _Topics_
 - To **Add a topic**
   - Press the _yellow_ button at the bottom.
 - To **Remove a topic**
@@ -63,10 +65,15 @@ Structure of the learning portal data's
   - Edit Course -> Manage Topics & Challenges (top-right position)
 - To **Add a challenge**:
   - Press challenge under the topic -> Add new challenges
-  - A challenge will have one of the three _labels_:
+  - **Labels** A challenge will have one of the three _labels_:
     - **Lecture**  -> Will contain lecture notes and theories
     - **Core**     -> Will be the challenge that students _must complete_
     - **Optional** -> Tough challenges for students who are willing to take on
+  - **Order** is the order of the challenge. The Challenges will be sorted according to it's order.
+  - **Video URL** is the link for the introductory video (can be blank)
+  - **Gitlab Repo** is the link for the link of the repo that contains the challenge's code
+  - **Description** is the description / short introduction / guidance for the challenge
+  
 ### Challenges
 ### Pair programming
 ### Dashboard
