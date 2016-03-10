@@ -13,7 +13,7 @@ Table of Contents
   * [Managing Users](#managing-users)
   * [Dashboard](#dashboard)
   * [Challenge Attempts](#attempts-for-individual-challenge)
-* [Pair Programming](#pair-programing)
+* [Pair Programming](#pair-programming)
 * [Gitlab Repository](#gitlab-repository)
 * [Code Review](#code-review)
 * [Issues](#issue-discovered)
@@ -44,13 +44,14 @@ Student    : Can attempt a Challenge and enjoy coding :)
 
 # Admin User settings
 ## First-time sign in
+---
 - **Log in** with your credentials
 - You will then be prompt to do a **one-time update** for your:
-  - Username
-  - A new password
--------
+ - Username
+ - A new password
 
 ## Navigation Bar
+---
 ### NEXT Academy Learning Portal Logo :)
 ### Courses 
 - Clicking a course will redirect you to the courses dashboard
@@ -67,6 +68,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
 
 
 ### Managing _Courses_
+----
 - To **Manage Courses**
 - The Course index page will have a **list of courses** 
 - Each of the Courses has 4 options:
@@ -75,9 +77,10 @@ Student    : Can attempt a Challenge and enjoy coding :)
     - **Edit** Course. (Pencil icon)
     - **Delete** Course. (Trash bin icon)
 - To **add a new course** press the _yellow Add new course_ button on top-right.
---------
 
-### Managing _Topics_
+
+## Managing _Topics_
+--------
 - To **Manage Topic**
   - Press the edit course button for the Course that the Topic belongs to
 - To **Add a topic**
@@ -89,9 +92,10 @@ Student    : Can attempt a Challenge and enjoy coding :)
   - Topics with duplicate orders will prevent from the Course to be updated.
 - **Title** and *description* for each Topic and the Course itself shall not be left *empty*.
   - An _error message_ 'Unable to update course' will appear if submit with empty fields  . 
---------
 
-### Managing _Challenges_
+
+## Managing _Challenges_
+___
 - To **Manage Challenges**:
   - Edit Course -> Manage Topics & Challenges (top-right position)
 - To **Add a Challenge**:
@@ -112,7 +116,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
   - ????
 
   
-### Managing _Users_ (Admin, Mentor, Student)_
+## Managing _Users_
 - To **Manage Users**:
   - Settings -> Manage Users
   - A list of Users will appear with the following options:
@@ -128,7 +132,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
   - **Last name**    -> User's last name (will be combined with first name and become username before User edits)
   - **Email**        -> User's email address
 
-### Dashboard
+## Dashboard
 - It's a dashboard for students to access NEXT Academy's syllabus :)
 - To access **Dashboard**:
   - Nav Bar -> Courses -> choose your Course 
@@ -141,24 +145,24 @@ Student    : Can attempt a Challenge and enjoy coding :)
   - Pressing it with open a list of **Challenges**
   - You will not be able to access to the next Topic if you have not complete the Challenges for previous Topic
 
-### Attempts for individual challenge
+## Attempts for individual challenge
 - Upon pressing _start challenge_, an attempt will be created for that Student on that Challenge
 - In GitLab, the Challenge's repository in git.nextacademy.com will be forked to the Student's repository
 
-### Pair programming
+## Pair programming
 - In the early phase of the bootcamp, students are encouraged to practice **Pair Programming**
 - To log in a second user
   - Go to Settings -> Log In Second User
 
-### GitLab Repository
+## GitLab Repository
 - Access permission for GitLab repository should be `internal`
 
-### Code Review
+## Code Review
 - Students will be redirected to **Code Review** section after they clicked _Complete Challenge_
 - Must comment? or Review and click to return to Dashboard?
 
 
-### Issue discovered
+## Issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page h1 is still create new student
 - After create new user error, password reset field is shown
