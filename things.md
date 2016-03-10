@@ -16,7 +16,7 @@ Table of Contents
 * [Pair Programming](#pair-programing)
 * [Gitlab Repository](#gitlab-repository)
 * [Code Review](#code-review)
-* [Problems](#problem/issue-discovered)
+* [Issues](#issue-discovered)
 
 Structure of the learning portal
 
@@ -160,7 +160,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - Must comment? or Review and click to return to Dashboard?
 
 
-### Problem/issue discovered
+### Issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page h1 is still create new student
 - After create new user error, password reset field is shown
