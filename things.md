@@ -61,11 +61,11 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - See students submitted attempt
 
 ### Settings
-- Manage course   -> Course dashboard
-- Manage user     -> List of students and admins
-- My profile      -> Shows your profile and achievements
-- Add SSH key     ->  #
-- Edit my account -> Edit your details and password
+- **Manage course**   -> Course dashboard
+- **Manage user**     -> List of students and admins
+- **My profile**      -> Shows your profile and achievements
+- **Add SSH key**     ->  #
+- **Edit my account** -> Edit your details and password
 
 
 ### Managing _Courses_
