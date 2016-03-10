@@ -34,12 +34,12 @@ Admin      : Can create Mentor and student User, Courses, Topics, Challenges, se
 Mentor     : Can see Students progress
 Student    : Can attempt a Challenge and enjoy coding :)
 
-|    Role    | Create syllabus   |     Create user       | See student's progress   | 
-|------------|:-----------------:|-----------------------|:------------------------:|
-| Superadmin |       Yes         |  Admin,Mentor,Student |          Yes             |
-|   Admin    |       Yes         |  Mentor,Student       |          Yes             |
-|   Mentor   |       No          |  Student              |          Yes             |
-|   Student  |       No          |  None                 |          Yes             |
+|    Role    | Create Course     | Create Topic/Challenges   |     Create user        | See student's progress   | 
+|------------|:-----------------:|:-------------------------:|------------------------|:------------------------:|
+| Superadmin |       Yes         |          Yes              |   Admin,Mentor,Student |          Yes             |
+|   Admin    |       No          |          Yes              |   Mentor,Student       |          Yes             |
+|   Mentor   |       No          |          Yes              |   None                 |          Yes             |
+|   Student  |       No          |          Yes              |   None                 |          Yes             |
 
 
 # Admin User settings
@@ -63,7 +63,7 @@ Student    : Can attempt a Challenge and enjoy coding :)
 - **Manage course**   -> Course dashboard
 - **Manage user**     -> List of students and admins
 - **My profile**      -> Shows your profile and achievements
-- **Add SSH key**     ->  #
+- **Add SSH key**     -> add SSH key for your device ( not needed for admins )
 - **Edit my account** -> Edit your details and password
 
 
@@ -112,8 +112,7 @@ ___
   - Go to the Topic that the Challenge belongs to -> Click on the Challenge name
 - To **Delete a challenge** :
   - Go to edit Challenge -> Click on the _Red trash bin icon_
-- To **Update instructions** :
-  - ????
+
 
   
 ## Managing _Users_
