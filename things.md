@@ -5,39 +5,71 @@ Index
 
 Structure of the learning portal data's
 
-Courses -> Topics -> Challenges
+-> Courses (Full Stack Bootcamp, iOS Bootcamp etc.)
 
-# For _ADMIN_
+---> Topics (Ruby, SQL, Sinatra, Rails etc.)
+
+-----> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
+
+# Admin User settings
 ## First-time sign in
 - **Log in** with your credentials
 - You will then be prompt to do a **one-time update** for your:
   - Username
   - Make a new password
-- Will be redirected to Courses index page after login
+- You will then be then be redirected to Managing Courses page 
+- 
+-------------
 
-## Course
+## Navigation Bar
+### Courses 
+- Clicking a course will redirect you to the courses dashboard
+
+### Assessments
+- See students submitted attempt
+
+### Settings
+- Manage course   -> Course index page
+- Manage user     -> List of students and admins
+- My profile      -> Shows your profile
+- Add SSH key     ->  #
+- Edit my account -> Edit your details and password
+
+
+### Managing Course
 - The course index page will have a **list of courses** 
 - Each of the courses has 4 options:
     - **Preview** page of the course (Eye open icon).
     - **Stats** for student in that course.
     - **Edit** course.
     - **Delete** course.
-- To **add** a new course press the _yellow button_ on top-right.
+- To **add a new course** press the _yellow button_ on top-right.
 
+--------
 
-## Editing _Course_ and it`s _Topics_
-- To **add a topic**, press the _yellow_ button at the bottom.
-- To **remove a topic**, press the _red_ button in the Topic itself.
+### Editing _Course_ and it`s _Topics_
+- To **Add a topic**
+  - Press the _yellow_ button at the bottom.
+- To **Remove a topic**
+  - Press the _red_ button in the Topic itself.
 - **Order** will determine the _order of the topic_. The Topics will be sorted according to it's order.
 - Topics shall not have the same **order**. 
   - Topics with duplicate orders will prevent from the Course to be updated.
 - **Title** and *description* for each Topic and the Course itself shall not be left *empty*.
   - An _error message_ 'Unable to update course' will appear if submit with empty fields  . 
 
-## Topic
-## Challenges
-## Pair programming
-## Dashboard
+### Managing _Topic_ and it's _Challenges_
+- To **Manage topics**:
+  - Edit Course -> Manage Topics & Challenges (top-right position)
+- To **Add a challenge**:
+  - Press challenge under the topic -> Add new challenges
+  - A challenge will have one of the three _labels_:
+    - **Lecture**  -> Will contain lecture notes and theories
+    - **Core**     -> Will be the challenge that students _must complete_
+    - **Optional** -> Tough challenges for students who are willing to take on
+### Challenges
+### Pair programming
+### Dashboard
 
 
 
