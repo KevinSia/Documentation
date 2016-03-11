@@ -91,7 +91,7 @@ Structure of the syllabus:
 
 
 ## Managing _Challenges_
-___
+---
 - To **Manage Challenges**:
   - 1. Edit Course page -> Manage Topics & Challenges (located at top-right)
   - 2. Accessing from [Dashboard](#dashboard) and go into the Challenge you want to manage
@@ -113,6 +113,7 @@ ___
 
   
 ## Managing _Users_
+---
 - To **Manage Users**:
   - [Settings](#settings) -> Manage Users
   - A list of Users will appear with the following options:
@@ -129,6 +130,7 @@ ___
   - **Email**        -> User's email address
 
 ## Dashboard
+---
 - It's a dashboard for students to access NEXT Academy's syllabus :)
 - To access **Dashboard**:
   - Nav Bar -> Courses -> choose your Course 
@@ -142,19 +144,23 @@ ___
   - You will not be able to access to the next Topic if you have not complete the Challenges for previous Topic
 
 ## Attempts for individual challenge
+---
 - Upon pressing **Start challenge** (in dashboard), an attempt will be created for that Student on that Challenge
 - In GitLab, the Challenge's repository in git.nextacademy.com will be forked to the Student's repository
 
 ## Pair programming
+---
 - In the early phase of the bootcamp, students are encouraged to practice _Pair Programming_
   - There will be a second user log into the account of the other pair
 - To _log in_ a second user
   - Go to Settings -> **Log In Second User**
 
 ## GitLab Repository
+---
 - For creating a Challenge repository, access permission for GitLab repository should be `internal`
 
 ## Code Review
+---
 - Students will be redirected to _Code Review_ section after they clicked _Complete Challenge_
 - Must comment? or Review and click to return to Dashboard? (to be confirmed)
 
