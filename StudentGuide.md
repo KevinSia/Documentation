@@ -25,12 +25,13 @@ Table of Contents
 - You will then be prompt to do a **one-time update** for your:
   - Username
   - New Password
-- (Reminder) If you accidentally skipped this page
+- If you accidentally **skipped the update page**
   - Go Navigation Bar -> Profile -> Edit my account
   - **Log out** and **Log In** again
-- You can edit your profile through Navigation Bar -> Profile -> Edit my account.
+- If you receive _Unable to update your profile_ error
+  - Try a different **username**, your username might have been taken.
 
-You will then be redirected to the Dashboard after you do your update:
+You will then be redirected to the **Dashboard** after you do your update:
 
 ## Dashboard
 - Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
