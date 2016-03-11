@@ -20,11 +20,15 @@ Table of Contents
 - Challenges (or exercises) will be what you be facing every day, because life is always about improving yourself through challenges #YOLO
 - Eg: Sudoku solver, RubyRacer, creating Facebook Authentication on your application etc.
 
-## First-Time Logging In
-- **Log In** with the credentials given to you by NEXT Academy (Press Let Me In to ask the Great Coding God to grant permission to you)
+## First-Time Logging In and Setting Up with ~~complicated~~ simple steps
+- **Log In** with the credentials given to you by NEXT Academy 
 - You will then be prompt to do a **one-time update** for your:
   - Username
   - New Password
+- (Reminder) If you accidentally skipped this page
+  - Go Navigation Bar -> Profile -> Edit my account
+  - **Log out** and **Log In** again
+- You can edit your profile through Navigation Bar -> Profile -> Edit my account.
 
 You will then be redirected to the Dashboard after you do your update:
 
@@ -48,6 +52,9 @@ You will then be redirected to the Dashboard after you do your update:
     - Submitting the Challenge will redirect you to the _Code Review_ page.
   - **Comments**
     - Discussions / insights / questions of that Challenge can be made here.
+- In order for you to use _Git_ features when doing Challenges, you will need to add SSH key
+  - To **Add SSH key**, Go Navigation Bar -> Profile -> Add SSH Key
+  - Key in the title and the public key for that Challenge.
 
 ## Navigation Bar
 - **_Courses_**
@@ -58,3 +65,10 @@ You will then be redirected to the Dashboard after you do your update:
     - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
   - **My profile**
     - This will show an overview of your completed challenges and the progress of the Topics.
+  - **Add SSH key**
+    - You will add your SSH key from here
+  - **Edit my account**
+    - Edit your settings here ( username, firstname , lastname , password )
+  - **Log out**
+    - Logs out your account. If there are two users logging in, the two users will be logged out.
+ 
