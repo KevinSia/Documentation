@@ -84,7 +84,8 @@ You will then be redirected to the **Dashboard** after you finish your update. L
     - Discussions / insights / questions of that Challenge can be made here.
 - In order for you to use [_Git_](#git) features when doing Challenges, you will need to add SSH key
   - To **Add SSH key**, Go Navigation Bar -> Profile -> Add SSH Key
-  - Key in the title and the public key for that Challenge.
+    - **Title**
+    - **Public key**
   
 ## Git
 - Git is a version control system for you to build up your code/app.
