@@ -6,9 +6,12 @@
 ## Table of Contents
 * [Structure of the Syllabus](#structure-of-the-syllabus)
 * [First-Time Logging In](#first-time-logging-in-and-setting-up-in-complicated-simple-steps)
+* [Navigation Bar](#navigation-bar)
 * [Dashboard](#dashboard)
 * [Challenges](#challenges)
-* [Navigation Bar](#navigation-bar)
+* [Git](#git)
+* [Code Review](#code-review)
+
 
 ## Structure of the Syllabus
 -> Course
@@ -27,14 +30,30 @@
 - You will then be prompt to do a **one-time update** :
 ![Update profile](update profile.png)
   - Username      -> your desired username 
-  - New Password  -> changing your own password
-- If you accidentally **skipped the update page**
+ - If you accidentally **skipped the update page**
   - Go Navigation Bar -> Profile -> Edit my account , or
   - **Log out** and **Log In** again
 - If you receive _Unable to update your profile_ error
   - Try a different **username**, your username might have been taken.
 
-You will then be redirected to the **Dashboard** after you do your update:
+You will then be redirected to the **Dashboard** after you finish your update. Let's go throught the navigation bar a little before we proceed.
+
+## Navigation Bar
+- **_Courses_**
+  - You can choose your Course here if you are taking multiple Courses
+- **_Assessments_**
+  - ??
+- **_Profile_**
+  - **Log in second user**
+    - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
+  - **My profile**
+    - This will show an overview of your completed challenges and the progress of the Topics.
+  - **Add SSH key**
+    - You will add your SSH key from here
+  - **Edit my account**
+    - Edit your settings here: username, firstname , lastname , password (can be left blank)
+  - **Log out**
+    - Logs out your account. If there are two users logging in, the two users will be logged out.
 
 ## Dashboard
 ![dashboard](Dashboard.png)
@@ -53,7 +72,8 @@ You will then be redirected to the **Dashboard** after you do your update:
 - Clicking on *Start/View Challenge* will bring you to Challenge page that contains the following:
 ![challenge page](challenge-1.png)
 ![challenge page 2](challenge-2.png)
-  - An introductory **video**
+  - An introductory **video** (the black part of the page will have video in it)
+  - **Insturctions* on how to make the repository(work) appear in your computer
   - **Description** of the Challenge
   - **Task(s)** for you to complete
   - **Feedback**
@@ -62,25 +82,17 @@ You will then be redirected to the **Dashboard** after you do your update:
     - Submitting the Challenge will redirect you to the _Code Review_ page.
   - **Comments**
     - Discussions / insights / questions of that Challenge can be made here.
-- In order for you to use _Git_ features when doing Challenges, you will need to add SSH key
+- In order for you to use [_Git_](#git) features when doing Challenges, you will need to add SSH key
   - To **Add SSH key**, Go Navigation Bar -> Profile -> Add SSH Key
   - Key in the title and the public key for that Challenge.
+  
+## Git
+- Git is a version control system for you to build up your code/app.
+- Imagine Git as a person in a group assignment whom his job is to save and compile the Word files from you and your groupmates.
 
-## Navigation Bar
-- **_Courses_**
-  - You can choose your Course here if you are taking multiple Courses
-- **_Assessments_**
-  - ??
-- **_Profile_**
-  - **Log in second user**
-    - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
-  - **My profile**
-    - This will show an overview of your completed challenges and the progress of the Topics.
-  - **Add SSH key**
-    - You will add your SSH key from here
-  - **Edit my account**
-    - Edit your settings here: username, firstname , lastname , password (can be left blank)
-  - **Log out**
-    - Logs out your account. If there are two users logging in, the two users will be logged out.
+## Code Review
+- After you submit your Challenge, you will be redirected to the **_Code Review_** page.
+- In this page you are able to see and comment other coder's code for this particular challenge. This goes the same for other coders to your code.
+- Once you finish reviewing, you can go back to the dashboard through the **Done Review** button.
  
 # Happy Coding!
