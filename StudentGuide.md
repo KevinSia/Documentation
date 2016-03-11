@@ -3,10 +3,12 @@
 > Welcome aboard, coders (soon-to-be)! This guide has every information about the learning portal. We hope you will enjoy throughout the course!
 
 
-Table of Contents
+## Table of Contents
 * [Structure of the Syllabus](#structure-of-the-syllabus)
 * [First-Time Logging In](#first-time-logging-in-and-setting-up-in-complicated-simple-steps)
 * [Dashboard](#dashboard)
+* [Challenges](#challenges)
+* [Navigation Bar](#navigation-bar)
 
 ## Structure of the Syllabus
 -> Course
@@ -50,10 +52,10 @@ You will then be redirected to the **Dashboard** after you do your update:
 ## Challenges 
 - Clicking on *Start/View Challenge* will bring you to Challenge page that contains the following:
 ![challenge page](challenge-1.png)
+![challenge page 2](challenge-2.png)
   - An introductory **video**
   - **Description** of the Challenge
   - **Task(s)** for you to complete
-![challenge page 2](challenge-2.png)
   - **Feedback**
     - This is to collect feed back from you about the Challenge for us to improve :)
   - **Submit Challenge** (after starting a challenge)
@@ -68,6 +70,7 @@ You will then be redirected to the **Dashboard** after you do your update:
 - **_Courses_**
   - You can choose your Course here if you are taking multiple Courses
 - **_Assessments_**
+  - ??
 - **_Profile_**
   - **Log in second user**
     - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
@@ -80,3 +83,4 @@ You will then be redirected to the **Dashboard** after you do your update:
   - **Log out**
     - Logs out your account. If there are two users logging in, the two users will be logged out.
  
+# Happy Coding!
