@@ -1,6 +1,6 @@
 #The Guide to NEXT Academy's learning portal
 
-> Welcome aboard, coders (soon-to-be)! This guide has every information about the learning portal. We hope you will enjoy throughout the course!
+> Welcome aboard, coders (soon-to-be)! This guide has every information about the learning portal. We hope you will enjoy throughout the course and be a real coder you've always wanted to be!
 
 
 ## Table of Contents
@@ -65,7 +65,7 @@ You will then be redirected to the **Dashboard** after you finish your update. L
   - ![challenges](dashboard-challenges.png) 
   - Each *point* under the timeline is a Topic. *Green points* are points you are currently on/already completed.
     - Clicking the *green point* will show you the list of Challenges for that particular Topic.
-    - Clink on *Start Challenge* to start the particular Challenge. Your date and time of starting the challenge will be saved the moment you click it.
+    - Clink on *Start Challenge* to start the particular Challenge. Your date and time of starting the challenge will be saved the moment you click it. You can view your Challenge later by pressing **View Challenge**
     - You must complete the _Core_ challenges (green labels) to be able to proceed to the next Topic.
 
 ## Challenges 
