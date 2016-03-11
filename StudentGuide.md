@@ -1,1 +1,60 @@
 #The Guide to NEXT Academy's learning portal
+
+> Welcome aboard, coders (soon-to-be)! This guide has every information about the learning portal. We hope you will enjoy throughout the course!
+**psshh ... press the code on the bottom left to go the nextacademy.com :)**
+
+Table of Contents
+* [Structure of the Syllabus](#structure-of-the-syllabus)
+* [First-Time Logging In](#first-time-logging-in)
+* [Dashboard](#dashboard)
+
+## Structure of the Syllabus
+-> Course
+- The bootcamp you are currently joining: iOS bootcamp, Full Stack Bootcamp etc
+
+---> Topics (Weekly basis)
+- While you are in the bootcamp you will be going through every single topics with the mentors <3
+- Eg: Ruby, Object-oriented Programming, HTML5/CSS/Javascript, SQL, Sinatra, Rails etc.
+
+-----> Challenges (Daily basis)
+- Challenges (or exercises) will be what you be facing every day, because life is always about improving yourself through challenges #YOLO
+- Eg: Sudoku solver, RubyRacer, creating Facebook Authentication on your application etc.
+
+## First-Time Logging In
+- **Log In** with the credentials given to you by NEXT Academy (Press Let Me In to ask the Great Coding God to grant permission to you)
+- You will then be prompt to do a **one-time update** for your:
+  - Username
+  - New Password
+
+You will then be redirected to the Dashboard after you do your update:
+
+## Dashboard
+- Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
+- **Current progress** will show the Challenge you are currently attempting.
+- **Timeline**
+  - Each *point* under the timeline is a Topic. *Green points* are points you are currently on/already completed.
+    - Clicking the *green point* will show you the list of Challenges for that particular Topic.
+    - Clink on *Start Challenge* to start the particular Challenge. Your date and time of starting the challenge will be saved the moment you click it.
+    - You must complete the _Core_ challenges to be able to proceed to the next Topic.
+
+## Challenges 
+- Clicking on *Start Challenge* will bring you to Challenge page that contains the following:
+  - An introductory **video**
+  - **Description** of the Challenge
+  - **Task(s)** for you to complete
+  - **Feedback**
+    - This is to collect feed back from you about the Challenge for us to improve :)
+  - **Submit Challenge**
+    - Submitting the Challenge will redirect you to the _Code Review_ page.
+  - **Comments**
+    - Discussions / insights / questions of that Challenge can be made here.
+
+## Navigation Bar
+- **_Courses_**
+  - You can choose your Course here if you are taking multiple Courses
+- **_Assessments_**
+- **_Profile_**
+  - **Log in second user**
+    - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
+  - **My profile**
+    - This will show an overview of your completed challenges and the progress of the Topics.
