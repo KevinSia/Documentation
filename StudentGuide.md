@@ -18,7 +18,7 @@
 - The bootcamp you are currently joining: iOS bootcamp, Full Stack Bootcamp etc
 
 ---> Topics (Weekly basis)
-- While you are in the bootcamp you will be going through every single topics with the mentors <3
+- While you are in the bootcamp you will be going through every topic with the help of mentors
 - Eg: Ruby, Object-oriented Programming, HTML5/CSS/Javascript, SQL, Sinatra, Rails etc.
 
 -----> Challenges (Daily basis)
