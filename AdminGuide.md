@@ -2,7 +2,7 @@
 
 Table of Contents
 ---
-
+* [Learning Portal Information](#learning-portal-infomation)
 * [Admin Usage](#admin-user-settings)
   * [Navigation Bar](#navigation-bar) 
     * [Courses](#courses) 
@@ -19,6 +19,7 @@ Table of Contents
 * [Code Review](#code-review)
 * [Issues](#issue-discovered)
 
+## Learning Portal Infomation
 Structure of the syllabus:
 > User 
 
@@ -29,15 +30,15 @@ Structure of the syllabus:
 > -----> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
 
 
-|    Role    | Create Course     | Create Topic/Challenges   |     Create user        | See student's progress   | 
-|------------|:-----------------:|:-------------------------:|------------------------|:------------------------:|
-| Superadmin |       Yes         |          Yes              |   Admin,Mentor,Student |          Yes             |
-|   Admin    |       No          |          Yes              |   Mentor,Student       |          Yes             |
-|   Mentor   |       No          |          Yes              |   None                 |          Yes             |
-|   Student  |       No          |          Yes              |   None                 |          Yes             |
+|    Role    | Create Course     | Create Topic/Challenges   |     Create user        | See all student's progress   | 
+|------------|:-----------------:|:-------------------------:|------------------------|:----------------------------:|
+| Superadmin |       Yes         |          Yes              |   Admin, Mentor, Student |          Yes                 |
+|   Admin    |       No          |          Yes              |   Mentor, Student       |          Yes                 |
+|   Mentor   |       No          |          No               |   None                 |          Yes                 |
+|   Student  |       No          |          No               |   None                 |          No                  |
 
 
-# Admin User settings
+## Admin User settings
 ## First-time log in
 ---
 - **Log in** with your given credentials
@@ -56,10 +57,10 @@ Structure of the syllabus:
 
 ### Settings
 - **Manage courses**   -> Course dashboard
-- **Manage users**     -> List of students and admins
-- **My profile**      -> Shows your profile and achievements
-- **Add SSH key**     -> add SSH key for your device ( not needed for admins )
-- **Edit my account** -> Edit your details and password
+- **Manage users**     -> List of students, mentors and admins
+- **My profile**       -> Shows your profile and achievements
+- **Add SSH key**      -> add SSH key for your device ( password-less authentication for GitLab )
+- **Edit my account**  -> Edit your details and password
 
 
 ## Managing _Courses_
@@ -70,6 +71,8 @@ Structure of the syllabus:
 - Each of the Courses has 4 options:
     - **Preview** page of the Course (Eye open icon).
     - **Stats** for the progress of the Course's student (Graph icon)
+     - Student's current attempting Challenge
+     - Student's progess on the Topic
     - **Edit** Course. (Pencil icon)
     - **Delete** Course. (Trash bin icon)
 - To **add a new course** press the _yellow Add new course_ button on top-right.
@@ -78,7 +81,7 @@ Structure of the syllabus:
 ## Managing _Topics_
 --------
 - To **Manage Topic**
-  - Press the edit course button for the Course that the Topic belongs to
+  - Enter the [Course edit page](#manage-courses) that the Topic belongs to
 - To **Add a topic**
   - Press the _yellow Add a topic_ button at the bottom.
 - To **Remove a topic**
@@ -93,21 +96,22 @@ Structure of the syllabus:
 ## Managing _Challenges_
 ___
 - To **Manage Challenges**:
-  - Edit Course -> Manage Topics & Challenges (top-right position)
+  - 1. Edit Course -> Manage Topics & Challenges (top-right position)
+  - 2. Accessing from [Dashboard](#dashboard) and go into the Challenge you want to manage
 - To **Add a Challenge**:
   - Press challenge under the topic -> Add new Challenges
-  - **Labels** A Challenge will have one of the three _labels_:
+  - **_Labels_** A Challenge will have one of the three _labels_:
     - **_Lecture_**     -> Will contain lecture notes and theories
-    - **_Core_**        -> Will be the challenge that students _must complete_
+    - **_Core_**        -> Will be the Challenge that students _must complete_
     - **_Optional_**    -> Tough Challenges for students who aren't afraid of losing
-  - **_Order_**         -> order of the challenge. The Challenges will be sorted according to it's order.
+  - **_Order_**         -> Order of the Challenge. The Challenges will be sorted according to it's Order.
   - **_Video URL_**     -> link for the introductory video (can be blank)
   - **_Gitlab Repo_**   -> link for the link of the repo that contains the Challenge's code
-  - **_Description_**   -> description / short introduction / guidance for the Challenge
+  - **_Description_**   -> Description / short introduction / guidance / insights for that Challenge
 - To **Edit a challenge** :
   - Go to the Topic that the Challenge belongs to -> Click on the Challenge name
 - To **Delete a challenge** :
-  - Go to edit Challenge -> Click on the _Red trash bin icon_
+  - Go to Edit Challenge page -> Click on the _Red trash bin icon_
 
 
   
@@ -136,29 +140,30 @@ ___
   - You can start the available Challenge (and create an **Attempt**) with this button.
   - You can continue where they left off. 
 - **Timeline** 
-  - Each _Green Dot_ represents a **Topic** 
+  - Each **Green Dot** represents a **Topic** 
   - Pressing it with open a list of **Challenges**
   - You will not be able to access to the next Topic if you have not complete the Challenges for previous Topic
 
 ## Attempts for individual challenge
-- Upon pressing _start challenge_, an attempt will be created for that Student on that Challenge
+- Upon pressing **Start challenge** (in dashboard), an attempt will be created for that Student on that Challenge
 - In GitLab, the Challenge's repository in git.nextacademy.com will be forked to the Student's repository
 
 ## Pair programming
-- In the early phase of the bootcamp, students are encouraged to practice **Pair Programming**
-- To log in a second user
-  - Go to Settings -> Log In Second User
+- In the early phase of the bootcamp, students are encouraged to practice _Pair Programming_
+  - There will be a second user log into the account of the other pair
+- To _log in_ a second user
+  - Go to Settings -> **Log In Second User**
 
 ## GitLab Repository
 - Access permission for GitLab repository should be `internal`
 
 ## Code Review
-- Students will be redirected to **Code Review** section after they clicked _Complete Challenge_
+- Students will be redirected to _Code Review_ section after they clicked _Complete Challenge_
 - Must comment? or Review and click to return to Dashboard?
 
 
 ## Issue discovered
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page header is still create new student (instead of create new user)
-- Shall we give the student a ~~freakin~~ cool name?
+- Shall we replace _student_ with a ~~freakin~~ cool name?
 
