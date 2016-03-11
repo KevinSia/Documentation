@@ -115,7 +115,7 @@ Structure of the syllabus:
 ## Managing _Users_
 ---
 - To **Manage Users**:
-  - [Settings](#settings) -> Manage Users
+  - [Settings](#navigation-bar) -> Manage Users
   - A list of Users will appear with the following options:
     - **Profile**          -> shows the User's profile and achievements
     - **Edit**             -> edits the User's profile and **reset User's password**
