@@ -22,7 +22,7 @@ Table of Contents
 
 ## First-Time Logging In and Setting Up in ~~complicated~~ simple steps
 - **Log In** with the credentials given to you by NEXT Academy 
-- ![Update profile](update profile.png)
+![Update profile](update profile.png)
 - You will then be prompt to do a **one-time update** for your:
   - Username
   - New Password
@@ -35,7 +35,7 @@ Table of Contents
 You will then be redirected to the **Dashboard** after you do your update:
 
 ## Dashboard
-- ![dashboard](Dashboard.png)
+![dashboard](Dashboard.png)
 - Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
 - **Current progress** will show the Challenge you are currently attempting.
 - **Timeline**
@@ -47,11 +47,11 @@ You will then be redirected to the **Dashboard** after you do your update:
 
 ## Challenges 
 - Clicking on *Start Challenge* will bring you to Challenge page that contains the following:
-  - ![challenge page](challenge-1.png)
+![challenge page](challenge-1.png)
   - An introductory **video**
   - **Description** of the Challenge
   - **Task(s)** for you to complete
-  - ![challenge page 2](challenge-2.png)
+![challenge page 2](challenge-2.png)
   - **Feedback**
     - This is to collect feed back from you about the Challenge for us to improve :)
   - **Submit Challenge**
