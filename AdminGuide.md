@@ -48,19 +48,16 @@ Structure of the syllabus:
 
 ## Navigation Bar
 ---
-### NEXT Academy Learning Portal Logo :)
-### Courses 
-- Clicking a course will redirect you to the courses dashboard
-
-### Assessments
-- See students submitted attempt
-
-### Settings
-- **Manage courses**   -> Course dashboard
-- **Manage users**     -> List of students, mentors and admins
-- **My profile**       -> Shows your profile and achievements
-- **Add SSH key**      -> add SSH key for your device ( password-less authentication for GitLab )
-- **Edit my account**  -> Edit your details and password
+- Courses 
+ - Clicking a course will redirect you to the courses dashboard
+- Assessments
+ - See students submitted attempt
+- Settings
+ - **Manage courses**   -> Course dashboard
+ - **Manage users**     -> List of students, mentors and admins
+ - **My profile**       -> Shows your profile and achievements
+ - **Add SSH key**      -> add SSH key for your machine ( password-less authentication for GitLab )
+ - **Edit my account**  -> Edit your details and password
 
 
 ## Managing _Courses_
