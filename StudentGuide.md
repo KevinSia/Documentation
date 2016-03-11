@@ -1,7 +1,7 @@
 #The Guide to NEXT Academy's learning portal
 
 > Welcome aboard, coders (soon-to-be)! This guide has every information about the learning portal. We hope you will enjoy throughout the course!
-**psshh ... press the code on the bottom left to go the nextacademy.com :)**
+
 
 Table of Contents
 * [Structure of the Syllabus](#structure-of-the-syllabus)
@@ -22,10 +22,10 @@ Table of Contents
 
 ## First-Time Logging In and Setting Up in ~~complicated~~ simple steps
 - **Log In** with the credentials given to you by NEXT Academy 
+- You will then be prompt to do a **one-time update** :
 ![Update profile](update profile.png)
-- You will then be prompt to do a **one-time update** for your:
-  - Username
-  - New Password
+  - Username      -> your desired username 
+  - New Password  -> changing your own password
 - If you accidentally **skipped the update page**
   - Go Navigation Bar -> Profile -> Edit my account , or
   - **Log out** and **Log In** again
@@ -37,13 +37,15 @@ You will then be redirected to the **Dashboard** after you do your update:
 ## Dashboard
 ![dashboard](Dashboard.png)
 - Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
+- **pssh ... pressing the learning portal logo will bring you to the dashboard too ;)**
+- **Quotes** are there to motivate you :)
 - **Current progress** will show the Challenge you are currently attempting.
 - **Timeline**
   - ![challenges](dashboard-challenges.png) 
   - Each *point* under the timeline is a Topic. *Green points* are points you are currently on/already completed.
     - Clicking the *green point* will show you the list of Challenges for that particular Topic.
     - Clink on *Start Challenge* to start the particular Challenge. Your date and time of starting the challenge will be saved the moment you click it.
-    - You must complete the _Core_ challenges to be able to proceed to the next Topic.
+    - You must complete the _Core_ challenges (green labels) to be able to proceed to the next Topic.
 
 ## Challenges 
 - Clicking on *Start/View Challenge* will bring you to Challenge page that contains the following:
