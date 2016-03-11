@@ -3,7 +3,7 @@
 Table of Contents
 ---
 
-* [Admin](#admin-user-settings)
+* [Admin Usage](#admin-user-settings)
   * [Navigation Bar](#navigation-bar) 
     * [Courses](#courses) 
     * [Assessments](#assessments)
