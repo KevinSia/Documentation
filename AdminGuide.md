@@ -157,7 +157,7 @@ Structure of the syllabus:
 
 ## GitLab Repository
 ---
-- For creating a Challenge repository, access permission for GitLab repository should be `internal`
+- When creating a Challenge repository, access permission for GitLab repository should be `internal`
 
 ## Code Review
 ---
