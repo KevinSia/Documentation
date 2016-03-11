@@ -135,7 +135,7 @@ ___
 - It's a dashboard for students to access NEXT Academy's syllabus :)
 - To access **Dashboard**:
   - Nav Bar -> Courses -> choose your Course 
-- **Current Progress** will show the latest challenge you has attemtped
+- **Current Progress** will show the latest challenge you are attempting.
 - **Start Challenge** button / **Continue Challenge** button:
   - You can start the available Challenge (and create an **Attempt**) with this button.
   - You can continue where they left off. 
