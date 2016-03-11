@@ -65,7 +65,7 @@ Structure of the syllabus:
 
 ## Managing _Courses_
 ----
-- To **Manage Courses**:
+- To **Manage Courses**/**Edit a Course**:
  - Settings -> Manage courses
 - The Course index page will have a **list of courses** 
 - Each of the Courses has 4 options:
@@ -81,7 +81,7 @@ Structure of the syllabus:
 ## Managing _Topics_
 --------
 - To **Manage Topic**
-  - Enter the [Course edit page](#manage-courses) that the Topic belongs to
+  - Enter the [Edit Course page](#managing-courses) that the Topic belongs to
 - To **Add a topic**
   - Press the _yellow Add a topic_ button at the bottom.
 - To **Remove a topic**
@@ -90,13 +90,13 @@ Structure of the syllabus:
 - Topics shall not have the same **order**. 
   - Topics with duplicate orders will prevent from the Course to be updated.
 - **Title** and *description* for each Topic and the Course itself shall not be left *empty*.
-  - An _error message_ 'Unable to update course' will appear if submit with empty fields  . 
+  - An _error message_ 'Unable to update course' will appear if form submitted with empty fields. 
 
 
 ## Managing _Challenges_
 ___
 - To **Manage Challenges**:
-  - 1. Edit Course -> Manage Topics & Challenges (top-right position)
+  - 1. Edit Course page -> Manage Topics & Challenges (located at top-right)
   - 2. Accessing from [Dashboard](#dashboard) and go into the Challenge you want to manage
 - To **Add a Challenge**:
   - Press challenge under the topic -> Add new Challenges
@@ -117,7 +117,7 @@ ___
   
 ## Managing _Users_
 - To **Manage Users**:
-  - Settings -> Manage Users
+  - [Settings](#settings) -> Manage Users
   - A list of Users will appear with the following options:
     - **Profile**          -> shows the User's profile and achievements
     - **Edit**             -> edits the User's profile and **reset User's password**
@@ -155,11 +155,11 @@ ___
   - Go to Settings -> **Log In Second User**
 
 ## GitLab Repository
-- Access permission for GitLab repository should be `internal`
+- For creating a Challenge repository, access permission for GitLab repository should be `internal`
 
 ## Code Review
 - Students will be redirected to _Code Review_ section after they clicked _Complete Challenge_
-- Must comment? or Review and click to return to Dashboard?
+- Must comment? or Review and click to return to Dashboard? (to be confirmed)
 
 
 ## Issue discovered
