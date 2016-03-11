@@ -34,7 +34,6 @@ Table of Contents
 You will then be redirected to the **Dashboard** after you do your update:
 
 ## Dashboard
-![Dashboard.png](Dashboard.png)
 - Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
 - **Current progress** will show the Challenge you are currently attempting.
 - **Timeline**
