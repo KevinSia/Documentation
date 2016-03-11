@@ -46,7 +46,7 @@ You will then be redirected to the **Dashboard** after you do your update:
     - You must complete the _Core_ challenges to be able to proceed to the next Topic.
 
 ## Challenges 
-- Clicking on *Start Challenge* will bring you to Challenge page that contains the following:
+- Clicking on *Start/View Challenge* will bring you to Challenge page that contains the following:
 ![challenge page](challenge-1.png)
   - An introductory **video**
   - **Description** of the Challenge
@@ -54,7 +54,7 @@ You will then be redirected to the **Dashboard** after you do your update:
 ![challenge page 2](challenge-2.png)
   - **Feedback**
     - This is to collect feed back from you about the Challenge for us to improve :)
-  - **Submit Challenge**
+  - **Submit Challenge** (after starting a challenge)
     - Submitting the Challenge will redirect you to the _Code Review_ page.
   - **Comments**
     - Discussions / insights / questions of that Challenge can be made here.
