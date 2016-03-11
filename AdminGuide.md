@@ -1,17 +1,18 @@
-# Guide to the NEXT Learning Portal (pun intended)
+# Admin Guide to the NEXT Learning Portal (pun intended)
 
 Table of Contents
 ---
 
 * [Admin](#admin-user-settings)
   * [Navigation Bar](#navigation-bar) 
+    * [Courses](#courses) 
     * [Assessments](#assessments)
     * [Settings](#settings)
-  * [Managing Course](#managing-courses)
-  * [Managing Topic](#managing-topics)
-  * [Managing Challenge](#managing-challenges)
+  * [Managing Courses](#managing-courses)
+  * [Managing Topics](#managing-topics)
+  * [Managing Challenges](#managing-challenges)
   * [Managing Users](#managing-users)
-  * [Dashboard](#dashboard)
+  * [The Dashboard](#dashboard)
   * [Challenge Attempts](#attempts-for-individual-challenge)
 * [Pair Programming](#pair-programming)
 * [Gitlab Repository](#gitlab-repository)
@@ -21,11 +22,11 @@ Table of Contents
 Structure of the syllabus:
 > User 
 
--> Courses (Full Stack Bootcamp, iOS Bootcamp etc.)
+> -> Courses (Full Stack Bootcamp, iOS Bootcamp etc.)
 
----> Topics (Ruby, SQL, Sinatra, Rails etc.)
+> ---> Topics (Ruby, SQL, Sinatra, Rails etc.)
 
------> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
+> -----> Challenges (RubyRacer, DeafAunty, Sudoku etc.)
 
 
 |    Role    | Create Course     | Create Topic/Challenges   |     Create user        | See student's progress   | 
@@ -37,9 +38,9 @@ Structure of the syllabus:
 
 
 # Admin User settings
-## First-time sign in
+## First-time log in
 ---
-- **Log in** with your credentials
+- **Log in** with your given credentials
 - You will then be prompt to do a **one-time update** for your:
  - Username
  - A new password
@@ -61,7 +62,7 @@ Structure of the syllabus:
 - **Edit my account** -> Edit your details and password
 
 
-### Managing _Courses_
+## Managing _Courses_
 ----
 - To **Manage Courses**:
  - Settings -> Manage courses
