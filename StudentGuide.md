@@ -20,13 +20,13 @@ Table of Contents
 - Challenges (or exercises) will be what you be facing every day, because life is always about improving yourself through challenges #YOLO
 - Eg: Sudoku solver, RubyRacer, creating Facebook Authentication on your application etc.
 
-## First-Time Logging In and Setting Up with ~~complicated~~ simple steps
+## First-Time Logging In and Setting Up in ~~complicated~~ simple steps
 - **Log In** with the credentials given to you by NEXT Academy 
 - You will then be prompt to do a **one-time update** for your:
   - Username
   - New Password
 - If you accidentally **skipped the update page**
-  - Go Navigation Bar -> Profile -> Edit my account
+  - Go Navigation Bar -> Profile -> Edit my account , or
   - **Log out** and **Log In** again
 - If you receive _Unable to update your profile_ error
   - Try a different **username**, your username might have been taken.
@@ -69,7 +69,7 @@ You will then be redirected to the **Dashboard** after you do your update:
   - **Add SSH key**
     - You will add your SSH key from here
   - **Edit my account**
-    - Edit your settings here ( username, firstname , lastname , password )
+    - Edit your settings here: username, firstname , lastname , password (can be left blank)
   - **Log out**
     - Logs out your account. If there are two users logging in, the two users will be logged out.
  
