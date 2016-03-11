@@ -42,14 +42,15 @@ You will then be redirected to the **Dashboard** after you finish your update. L
 - **_Courses_**
   - You can choose your Course here if you are taking multiple Courses
 - **_Assessments_**
-  - ??
+  - There will be assessments to test your progress throughout the bootcamp.
+  - You can access your _Assessment results_ here.
 - **_Profile_**
   - **Log in second user**
     - _Pair programming_ will be introduced during the early stage of the Bootcamp. Two coders will work together as a *pair* on certain Challenges. The other pair will have to log in with this button to start the Challenges as a *pair*
   - **My profile**
     - This will show an overview of your completed challenges and the progress of the Topics.
   - **Add SSH key**
-    - You will add your SSH key from here
+    - You will add your SSH key from here. SSH key is needed for you to use [Git](#git).
   - **Edit my account**
     - Edit your settings here: username, firstname , lastname , password (can be left blank)
   - **Log out**
@@ -57,8 +58,7 @@ You will then be redirected to the **Dashboard** after you finish your update. L
 
 ## Dashboard
 ![dashboard](Dashboard.png)
-- Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often.
-- **pssh ... pressing the learning portal logo will bring you to the dashboard too ;)**
+- Dashboard is the main page where you can have access to your **Topics** and **Challenges**. You will be using it very often. **(pssh ... pressing the learning portal logo will bring you to the dashboard too ;) )**
 - **Quotes** are there to motivate you :)
 - **Current progress** will show the Challenge you are currently attempting.
 - **Timeline**
@@ -73,7 +73,7 @@ You will then be redirected to the **Dashboard** after you finish your update. L
 ![challenge page](challenge-1.png)
 ![challenge page 2](challenge-2.png)
   - An introductory **video** (the black part of the page will have video in it)
-  - **Insturctions* on how to make the repository(work) appear in your computer
+  - **Instructions** on how to use Git and make the repository(work) appear in your computer
   - **Description** of the Challenge
   - **Task(s)** for you to complete
   - **Feedback**
