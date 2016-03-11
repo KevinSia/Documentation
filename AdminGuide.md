@@ -166,4 +166,5 @@ ___
 - After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
 - Create new user page header is still create new student (instead of create new user)
 - Shall we replace _student_ with a ~~freakin~~ cool name?
+- Unique username error not clear in update page
 
