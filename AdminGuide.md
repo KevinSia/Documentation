@@ -166,8 +166,9 @@ Structure of the syllabus:
 
 
 ## Issue discovered
-- After pressing update challenge, redirects back to edit challenge page (should return back to topics index)
-- Create new user page header is still create new student (instead of create new user)
-- Shall we replace _student_ with a ~~freakin~~ cool name?
-- Unique username error not clear in update page
+- After pressing update challenge, redirects back to edit challenge page (intended?)
+- Create new user page header is still create new **student** (should be create new **user**)
+- Lets replace _student_ with a ~~freaking~~ cool name?
+- Unique username error not clear in update page (change flash message)
+- Duplicated challenge order error more user-friendly? (show what order has been taken)
 
