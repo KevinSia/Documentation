@@ -151,7 +151,9 @@ Structure of the syllabus:
 ## Pair programming
 ---
 - In the early phase of the bootcamp, students are encouraged to practice _Pair Programming_
-  - There will be a second user log into the account of the other pair
+  - There will be a second user Displaying all 4 User
+Name	Username	Email	
+Admin	Ping C	log into the account of the other pair
 - To _log in_ a second user
   - Go to Settings -> **Log In Second User**
 
@@ -171,4 +173,3 @@ Structure of the syllabus:
 - Lets replace _student_ with a ~~freaking~~ cool name?
 - Unique username error not clear in update page (change flash message)
 - Duplicated challenge order error more user-friendly? (show what order has been taken)
-
