@@ -3,6 +3,7 @@
 1. [Ruby](#ruby)
 2. [Rails](#rails)
 3. [R-spec](#r-spec)
+4. [Rails Magic](#rails-magic)
 
   
 ```ruby
@@ -1180,6 +1181,13 @@ end
     end
   end
   ```
+  
+  ## Rails Magic
+  - You can use ActiveRecord object to find by id
+    ```ruby
+    user = User.where(role:'admin')           # => returns an object
+    syllabus = Syallbus.where(user_id: user)  # => .where will take the ids and find column user_id
+    ```
 
   
   
