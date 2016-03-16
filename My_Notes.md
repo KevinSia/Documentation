@@ -119,8 +119,9 @@
   # subject block is invoked at most once per example
   ```
 ### Hooks
-- use before(:each) and avoid using before(:all)
-  
+- use `before(:each)` and avoid using `before(:all)`
+  - `before(:each)` does not share state across examples, while `before(:all)` does
+- `before/after(:each)` hooks are wrapped by the `around` hook
 
 
 
