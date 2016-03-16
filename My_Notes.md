@@ -27,6 +27,10 @@
   arr.uniq               #=> ['a', 'b', 'c', 'd', 'e', 'f']
   
 ```
+- Hash method:
+```ruby
+.fetch
+```
 
 ## R-Spec
 ### Subject
@@ -121,7 +125,27 @@
 ### Hooks
 - use `before(:each)` and avoid using `before(:all)`
   - `before(:each)` does not share state across examples, while `before(:all)` does
-- `before/after(:each)` hooks are wrapped by the `around` hook
+- `before/after(:each)` hooks are wrapped by the `around` hook but NOT `:all`
+
+### Let
+- `let`creates a method for your method?(lol)
+```ruby
+let(:foo) { Foo.new }
+
+# is very nearly equivalent to this:
+def foo
+  @foo ||= Foo.new
+end
+
+describe '#type_id' do
+  let(:resource) { FactoryGirl.create :device }
+  let(:type)     { Type.find resource.type_id }
+
+  it 'sets the type_id field' do
+    expect(resource.type_id).to equal(type.id)
+  end
+end
+```
 
 
 
