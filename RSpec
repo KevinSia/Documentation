@@ -1,0 +1,3 @@
+# My RSpec Notes
+
+- if Argument of most outer example is a Class, an instance of that Class can be exposed to the inner examples with ```.subject```
