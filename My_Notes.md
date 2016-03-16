@@ -1,5 +1,6 @@
 # My Notes
 
+[Ruby](#ruby)
 [Rspec](#rspec)
 - [Rspec subject](#subject)
 
@@ -25,6 +26,8 @@
   arr.compact!           # arr => ['a', 'b', 'c', 'd', 'e', 'f']
   arr.shift('a')         #=> ['a', 'a', 'b', 'c', 'd', 'e', 'f']
   arr.uniq               #=> ['a', 'b', 'c', 'd', 'e', 'f']
+  
+  arr.drop_while
   
 ```
 - Hash method:
