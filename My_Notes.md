@@ -27,6 +27,7 @@
 
 ## R-Spec
 - using Subject
+- take `subject` like a Class as opposed to `let` as a method
   - Implicit defined `subject`
   - if the argument of most outer example is a Class, an instance of that Class can be exposed to the inner examples with `.subject`
   ```ruby
