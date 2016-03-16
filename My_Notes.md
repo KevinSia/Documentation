@@ -1,5 +1,7 @@
 # My Notes
 
+[Rspec subject](#subject)
+
 ## Ruby
 - Array methods in ruby
 ```ruby
@@ -26,7 +28,7 @@
 ```
 
 ## R-Spec
-- using Subject
+### Subject
 - take `subject` like a Class as opposed to `let` as a instance variable
   - Implicit defined `subject`
   - if the argument of most outer example is a Class, an instance of that Class can be exposed to the inner examples with `.subject`
