@@ -26,52 +26,95 @@
 ```
 
 ## R-Spec
-- if Argument of most outer example is a Class, an instance of that Class can be exposed to the inner examples with `.subject`
-```ruby
-  # under top level group
-  describe Array do
-    it "should be empty when first created" do
-      subject.should be_empty  # similiar to array.should be_empty
-    end
-  end
-  
-  # under nested group
-  describe Array do
-    describe "when first created" do
-      it "should be empty" do
-        subject.should be_empty
+- using Subject
+  - Implicit defined `subject`
+  - if the argument of most outer example is a Class, an instance of that Class can be exposed to the inner examples with `.subject`
+  ```ruby
+    # under top level group
+    describe Array do
+      it "should be empty when first created" do
+        subject.should be_empty  # similiar to array.should be_empty
       end
     end
-  end
-  
-  # top most group wins (even there are two classes)
-  
-  class ArrayWithOneElement < Array
-    def initialize(*)
-      super
-      unshift "first element"
-    end
-  end
-
-  describe Array do
-    describe ArrayWithOneElement do
-      context "referenced as subject" do
-        it "should be empty (because it is the Array declared at the top)" do
+    
+    # under nested group
+    describe Array do
+      describe "when first created" do
+        it "should be empty" do
           subject.should be_empty
         end
       end
+    end
+    
+    # top most group wins (even there are two classes)
+    
+    class ArrayWithOneElement < Array
+      def initialize(*)
+        super
+        unshift "first element"
+      end
+    end
   
-      context "created in the example" do
-        it "should not be empty" do
-          ArrayWithOneElement.new.should_not be_empty
+    describe Array do
+      describe ArrayWithOneElement do
+        context "referenced as subject" do
+          it "should be empty (because it is the Array declared at the top)" do
+            subject.should be_empty
+          end
         end
+    
+        context "created in the example" do
+          it "should not be empty" do
+            ArrayWithOneElement.new.should_not be_empty
+          end
+        end
+      end
+    end
+    
+  ```
+  - Explicit `subject`
+  ```ruby
+  # subject in *top* level
+  describe Array, "with some elements" do
+    subject { [1,2,3] }
+    it "should have the prescribed elements" do
+      subject.should == [1,2,3]
+    end
+  end
+  
+  # subject in *nested* group
+  describe Array do
+    subject { [1,2,3] }
+    describe "with some elements" do
+      it "should have the prescribed elements" do
+        subject.should == [1,2,3]
       end
     end
   end
   
-```
-
--
+  # access subject from *before block* (before method is not lazy loaded)
+  describe Array, "with some elements" do
+    subject { [] }
+    before { subject.push(1,2,3) }
+    it "should have the prescribed elements" do
+      subject.should == [1,2,3]
+    end
+  end
+  
+  # invoke helper method from subject block
+  describe Array do
+    def prepared_array; [1,2,3] end
+    subject { prepared_array }        # method is inside subject block, calling subject block will invoke method
+    describe "with some elements" do
+      it "should have the prescribed elements" do
+        subject.should == [1,2,3]
+      end
+    end
+  end
+  
+  # subject block is invoked at most once per example
+  ```
+  
 
 
 
