@@ -117,6 +117,8 @@
   
   # subject block is invoked at most once per example
   ```
+### Hooks
+- use before(:each) and avoid using before(:all)
   
 
 
