@@ -1,6 +1,7 @@
 # My Notes
 
-[Rspec subject](#subject)
+[Rspec](#rspec)
+- [Rspec subject](#subject)
 
 ## Ruby
 - Array methods in ruby
