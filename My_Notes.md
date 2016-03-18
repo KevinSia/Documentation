@@ -169,6 +169,9 @@ Guard -> auto-testing
 Figaro -> application.yml gitignore
 Sendgrid -> email
 Will_paginate -> pagination
+Better_errors -> error interface
+bootstrap_rails / foundation_rails -> front-end framework
+Spring -> rails app preloader
 
 
 
