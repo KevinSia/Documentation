@@ -150,6 +150,26 @@ describe '#type_id' do
 end
 ```
 
+## Gemlist
+Stripe  -> membership
+Recurly -> subscription
+Clearance, Devise -> authentication
+Pundit -> authorization
+Rspec -> testing
+Capybara -> feature testing gem
+Slim-rails -> use Slim format
+Filterrific -> data filter bar
+Searchkick -> search bar
+Puma -> server
+Sidekiq -> jobs
+Redis -> store jobs
+Carrierwave -> uploading
+Fog -> onliine storage
+Guard -> auto-testing
+Figaro -> application.yml gitignore
+Sendgrid -> email
+Will_paginate -> pagination
+
 
 
 
