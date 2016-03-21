@@ -150,6 +150,9 @@ describe '#type_id' do
 end
 ```
 
+##Pundit
+- when using policy(something) on UserPolicy, is equivalent to UserPolicy.new(current_user, something)
+
 ## Gemlist
 Stripe  -> membership
 Recurly -> subscription
@@ -172,6 +175,8 @@ Will_paginate -> pagination
 Better_errors -> error interface
 bootstrap_rails / foundation_rails -> front-end framework
 Spring -> rails app preloader
+
+
 
 
 
