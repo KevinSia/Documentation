@@ -35,6 +35,14 @@
 .fetch
 ```
 
+## Rails
+- Joining names
+```ruby
+def name
+  [firstname, lastname],join(' ')
+end
+```
+
 ## R-Spec
 ### Subject
 - take `subject` like a Class as opposed to `let` as a instance variable
