@@ -176,7 +176,9 @@ end
 - bootstrap_rails / foundation_rails -> front-end framework
 - Spring -> rails app preloader
 
-
+## Binstubs
+- Prepares the environment before dispatching the call to the original executable.
+- `bundle exec <command>` is so essential. It ensures the right versions of dependencies get activated, ensuring a consistent ruby runtime environment. 
 
 
 
