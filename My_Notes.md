@@ -154,27 +154,27 @@ end
 - when using policy(something) on UserPolicy, is equivalent to UserPolicy.new(current_user, something)
 
 ## Gemlist
-Stripe  -> membership
-Recurly -> subscription
-Clearance, Devise -> authentication
-Pundit -> authorization
-Rspec -> testing
-Capybara -> feature testing gem
-Slim-rails -> use Slim format
-Filterrific -> data filter bar
-Searchkick -> search bar
-Puma -> server
-Sidekiq -> jobs
-Redis -> store jobs
-Carrierwave -> uploading
-Fog -> onliine storage
-Guard -> auto-testing
-Figaro -> application.yml gitignore
-Sendgrid -> email
-Will_paginate -> pagination
-Better_errors -> error interface
-bootstrap_rails / foundation_rails -> front-end framework
-Spring -> rails app preloader
+- Stripe  -> membership
+- Recurly -> subscription
+- Clearance, Devise -> authentication
+- Pundit -> authorization
+- Rspec -> testing
+- Capybara -> feature testing gem
+- Slim-rails -> use Slim format
+- Filterrific -> data filter bar
+- Searchkick -> search bar
+- Puma -> server
+- Sidekiq -> jobs
+- Redis -> store jobs
+- Carrierwave -> uploading
+- Fog -> onliine storage
+- Guard -> auto-testing
+- Figaro -> application.yml gitignore
+- Sendgrid -> email
+- Will_paginate -> pagination
+- Better_errors -> error interface
+- bootstrap_rails / foundation_rails -> front-end framework
+- Spring -> rails app preloader
 
 
 
