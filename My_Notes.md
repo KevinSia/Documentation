@@ -157,6 +157,7 @@ describe '#type_id' do
   end
 end
 ```
+- always check for false positive by intentionally breaking things
 
 ##Pundit
 - when using policy(something) on UserPolicy, is equivalent to UserPolicy.new(current_user, something)
