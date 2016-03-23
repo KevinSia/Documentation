@@ -184,6 +184,12 @@ end
 - Better_errors -> error interface
 - bootstrap_rails / foundation_rails -> front-end framework
 - Spring -> rails app preloader
+- Meta_request
+- Binding_of_caller
+- Awesome_print
+- 
+
+define_method 
 
 ## Binstubs
 - Prepares the environment before dispatching the call to the original executable.
