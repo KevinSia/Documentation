@@ -45,6 +45,7 @@ end
 - `includes` vs `joins`
   - if need association data, use `includes` 
   - else, use `joins` as it lazy loads data
+- ActiveSupport::Inflector for some string hacking :)
 
 ## R-Spec
 ### Subject
