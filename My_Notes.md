@@ -42,6 +42,9 @@ def name
   [firstname, lastname],join(' ')
 end
 ```
+- `includes` vs `joins`
+  - if need association data, use `includes` 
+  - else, use `joins` as it lazy loads data
 
 ## R-Spec
 ### Subject
