@@ -192,6 +192,8 @@ end
 - Binding_of_caller
 - Awesome_print
 - IFTTT / zapier -> app 
+- Cocoon -> nested_attribute form gem
+- jquery-turbolinks -> gem to solve turbolink problems on jquery
 
 define_method 
 
