@@ -196,7 +196,17 @@ end
 - jquery-turbolinks -> gem to solve turbolink problems on jquery
 
 # define_method 
-# elasticsearch start
+# elasticsearch
+- Commands:
+  - console      Launch in the current console.
+  - start        Start in the background as a daemon process.
+  - stop         Stop if running as a daemon or in another console.
+  - restart      Stop if running and then start.
+  - condrestart  Restart only if already running.
+  - status       Query the current status.
+  - install      Install to start automatically when system boots.
+  - remove       Uninstall.
+  - dump         Request a Java thread dump if running.
 ## Binstubs
 - Prepares the environment before dispatching the call to the original executable.
 - `bundle exec <command>` is so essential. It ensures the right versions of dependencies get activated, ensuring a consistent ruby runtime environment. 
