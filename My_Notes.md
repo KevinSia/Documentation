@@ -35,6 +35,7 @@
 .fetch
 ```
 
+- when push an Array/Hash into an Array, you're actually pushing the address of the object
 ## Rails
 - Joining names
 ```ruby
