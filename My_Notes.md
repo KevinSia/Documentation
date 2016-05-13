@@ -47,6 +47,7 @@ end
   - if need association data, use `includes` 
   - else, use `joins` as it lazy loads data
 - ActiveSupport::Inflector for some string hacking :)
+- when using `has_one` association, doing `create_association` twice will cause one `INSERT INTO` and one `UPDATE` to happen
 
 ## R-Spec
 ### Subject
